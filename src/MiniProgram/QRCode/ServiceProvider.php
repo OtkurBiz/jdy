@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the otkurbiz/bytedance.
+ * This file is part of the otkurbiz/jdy.
  *
  * (c) alim <alim@bulutbazar.com>
  *
@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\MiniProgram\QRCode;
+namespace OtkurBiz\jdy\MiniProgram\QRCode;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

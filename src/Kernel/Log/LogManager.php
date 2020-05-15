@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Log;
+namespace OtkurBiz\jdy\Kernel\Log;
 
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\ErrorLogHandler;
@@ -19,7 +19,7 @@ use Monolog\Handler\SlackWebhookHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogHandler;
 use Monolog\Logger as Monolog;
-use OtkurBiz\ByteDance\Kernel\ServiceContainer;
+use OtkurBiz\jdy\Kernel\ServiceContainer;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -30,7 +30,7 @@ use Psr\Log\LoggerInterface;
 class LogManager implements LoggerInterface
 {
     /**
-     * @var \OtkurBiz\ByteDance\Kernel\ServiceContainer
+     * @var \OtkurBiz\jdy\Kernel\ServiceContainer
      */
     protected $app;
 
@@ -67,7 +67,7 @@ class LogManager implements LoggerInterface
     /**
      * LogManager constructor.
      *
-     * @param \OtkurBiz\ByteDance\Kernel\ServiceContainer $app
+     * @param \OtkurBiz\jdy\Kernel\ServiceContainer $app
      */
     public function __construct(ServiceContainer $app)
     {
@@ -170,8 +170,8 @@ class LogManager implements LoggerInterface
      */
     protected function createEmergencyLogger()
     {
-        return new Monolog('EasyWeChat', $this->prepareHandlers([new StreamHandler(
-            \sys_get_temp_dir().'/easywechat/easywechat.log', $this->level(['level' => 'debug'])
+        return new Monolog('jdy', $this->prepareHandlers([new StreamHandler(
+            \sys_get_temp_dir().'/jdy/jdy.log', $this->level(['level' => 'debug'])
         )]));
     }
 
@@ -250,7 +250,7 @@ class LogManager implements LoggerInterface
             $this->prepareHandler(new SlackWebhookHandler(
                 $config['url'],
                 $config['channel'] ?? null,
-                $config['username'] ?? 'EasyWeChat',
+                $config['username'] ?? 'jdy',
                 $config['attachment'] ?? true,
                 $config['emoji'] ?? ':boom:',
                 $config['short'] ?? false,
@@ -271,7 +271,7 @@ class LogManager implements LoggerInterface
     {
         return new Monolog($this->parseChannel($config), [
             $this->prepareHandler(new SyslogHandler(
-                    'EasyWeChat', $config['facility'] ?? LOG_USER, $this->level($config))
+                    'jdy', $config['facility'] ?? LOG_USER, $this->level($config))
             ),
         ]);
     }

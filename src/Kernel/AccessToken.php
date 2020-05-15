@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the OtkurBiz/ByteDance.
+ * This file is part of the OtkurBiz/jdy.
  *
  * (c) alim <alim@bulutbazar.com>
  *
@@ -8,14 +8,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel;
+namespace OtkurBiz\jdy\Kernel;
 
-use OtkurBiz\ByteDance\Kernel\Contracts\AccessTokenInterface;
-use OtkurBiz\ByteDance\Kernel\Exceptions\HttpException;
-use OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException;
-use OtkurBiz\ByteDance\Kernel\Exceptions\RuntimeException;
-use OtkurBiz\ByteDance\Kernel\Traits\HasHttpRequests;
-use OtkurBiz\ByteDance\Kernel\Traits\InteractsWithCache;
+use OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface;
+use OtkurBiz\jdy\Kernel\Exceptions\HttpException;
+use OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException;
+use OtkurBiz\jdy\Kernel\Exceptions\RuntimeException;
+use OtkurBiz\jdy\Kernel\Traits\HasHttpRequests;
+use OtkurBiz\jdy\Kernel\Traits\InteractsWithCache;
 use Pimple\Container;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -61,7 +61,7 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * @var string
      */
-    protected $cachePrefix = 'otkurbiz.bytedance.kernel.access_token.';
+    protected $cachePrefix = 'otkurbiz.jdy.kernel.access_token.';
 
     /**
      * AccessToken constructor.
@@ -76,11 +76,11 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * @param bool $refresh
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\HttpException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\RuntimeException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\RuntimeException
      *
      * @return array
      */
@@ -102,9 +102,9 @@ abstract class AccessToken implements AccessTokenInterface
      * @param int    $lifetime
      *
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\RuntimeException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\RuntimeException
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Contracts\AccessTokenInterface
+     * @return \OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface
      */
     public function setToken(array $result, $lifetime = 7200): AccessTokenInterface
     {
@@ -119,13 +119,13 @@ abstract class AccessToken implements AccessTokenInterface
     }
 
     /**
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\HttpException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\RuntimeException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\RuntimeException
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Contracts\AccessTokenInterface
+     * @return \OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface
      */
     public function refresh(): AccessTokenInterface
     {
@@ -138,11 +138,11 @@ abstract class AccessToken implements AccessTokenInterface
      * @param array $credentials
      * @param bool  $toArray
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\HttpException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\HttpException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      *
-     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\ByteDance\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\jdy\Kernel\Support\Collection|array|object|string
      */
     public function requestToken(array $credentials, $toArray = false)
     {
@@ -160,11 +160,11 @@ abstract class AccessToken implements AccessTokenInterface
      * @param \Psr\Http\Message\RequestInterface $request
      * @param array                              $requestOptions
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\HttpException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\RuntimeException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\RuntimeException
      *
      * @return \Psr\Http\Message\RequestInterface
      */
@@ -181,7 +181,7 @@ abstract class AccessToken implements AccessTokenInterface
      *
      * @param array $credentials
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      *
      * @return ResponseInterface
      */
@@ -205,11 +205,11 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * The request query will be used to add to the request.
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\HttpException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\HttpException
      * @throws \Psr\SimpleCache\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\RuntimeException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\RuntimeException
      *
      * @return array
      */
@@ -219,7 +219,7 @@ abstract class AccessToken implements AccessTokenInterface
     }
 
     /**
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      *
      * @return string
      */

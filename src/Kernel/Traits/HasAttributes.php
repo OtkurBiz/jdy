@@ -8,11 +8,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Traits;
+namespace OtkurBiz\jdy\Kernel\Traits;
 
-use OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException;
-use OtkurBiz\ByteDance\Kernel\Support\Arr;
-use OtkurBiz\ByteDance\Kernel\Support\Str;
+use OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException;
+use OtkurBiz\jdy\Kernel\Support\Arr;
+use OtkurBiz\jdy\Kernel\Support\Str;
 
 /**
  * Trait Attributes.
@@ -233,7 +233,7 @@ trait HasAttributes
     /**
      * Check required attributes.
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      */
     protected function checkRequiredAttributes()
     {

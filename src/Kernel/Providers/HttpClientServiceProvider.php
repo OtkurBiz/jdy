@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Providers;
+namespace OtkurBiz\jdy\Kernel\Providers;
 
 use GuzzleHttp\Client;
 use Pimple\Container;

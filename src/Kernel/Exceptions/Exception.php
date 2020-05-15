@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Exceptions;
+namespace OtkurBiz\jdy\Kernel\Exceptions;
 
 use Exception as BaseException;
 

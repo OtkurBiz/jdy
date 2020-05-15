@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Traits;
+namespace OtkurBiz\jdy\Kernel\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -132,7 +132,7 @@ trait HasHttpRequests
      * @param string $method
      * @param array  $options
      *
-     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\ByteDance\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\jdy\Kernel\Support\Collection|array|object|string
      */
     public function request($url, $method = 'GET', $options = []): ResponseInterface
     {

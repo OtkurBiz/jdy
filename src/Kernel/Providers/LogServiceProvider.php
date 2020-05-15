@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Providers;
+namespace OtkurBiz\jdy\Kernel\Providers;
 
-use OtkurBiz\ByteDance\Kernel\Log\LogManager;
+use OtkurBiz\jdy\Kernel\Log\LogManager;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
@@ -69,7 +69,7 @@ class LogServiceProvider implements ServiceProviderInterface
                 'channels' => [
                     'single' => [
                         'driver' => 'single',
-                        'path'   => $app['config']->get('log.file') ?: \sys_get_temp_dir().'/logs/easywechat.log',
+                        'path'   => $app['config']->get('log.file') ?: \sys_get_temp_dir().'/logs/jdy.log',
                         'level'  => $app['config']->get('log.level', 'debug'),
                     ],
                 ],

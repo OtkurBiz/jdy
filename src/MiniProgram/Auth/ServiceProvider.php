@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the otkurbiz/bytedance.
+ * This file is part of the otkurbiz/jdy.
  *
  * (c) alim <alim@bulutbazar.com>
  *
@@ -8,9 +8,8 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\MiniProgram\Auth;
+namespace OtkurBiz\jdy\MiniProgram\Auth;
 
-use OtkurBiz\ByteDance\MiniProgram\Encryptor;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
@@ -33,8 +32,5 @@ class ServiceProvider implements ServiceProviderInterface
             return new Client($app);
         };
 
-        !isset($app['encryptor']) && $app['encryptor'] = function ($app) {
-            return new Encryptor();
-        };
     }
 }

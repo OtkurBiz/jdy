@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Contracts;
+namespace OtkurBiz\jdy\Kernel\Contracts;
 
 use ArrayAccess;
 

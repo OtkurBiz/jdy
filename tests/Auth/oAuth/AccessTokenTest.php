@@ -1,6 +1,6 @@
 <?php
 
-use OtkurBiz\ByteDance\Factory;
+use OtkurBiz\jdy\Factory;
 use PHPUnit\Framework\TestCase;
 
 class AccessTokenTest extends TestCase

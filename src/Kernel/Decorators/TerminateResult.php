@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Decorators;
+namespace OtkurBiz\jdy\Kernel\Decorators;
 
 /**
  * Class TerminateResult.

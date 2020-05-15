@@ -8,14 +8,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Traits;
+namespace OtkurBiz\jdy\Kernel\Traits;
 
-use OtkurBiz\ByteDance\Kernel\Clauses\Clause;
-use OtkurBiz\ByteDance\Kernel\Contracts\EventHandlerInterface;
-use OtkurBiz\ByteDance\Kernel\Decorators\FinallyResult;
-use OtkurBiz\ByteDance\Kernel\Decorators\TerminateResult;
-use OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException;
-use OtkurBiz\ByteDance\Kernel\ServiceContainer;
+use OtkurBiz\jdy\Kernel\Clauses\Clause;
+use OtkurBiz\jdy\Kernel\Contracts\EventHandlerInterface;
+use OtkurBiz\jdy\Kernel\Decorators\FinallyResult;
+use OtkurBiz\jdy\Kernel\Decorators\TerminateResult;
+use OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException;
+use OtkurBiz\jdy\Kernel\ServiceContainer;
 
 /**
  * Trait Observable.
@@ -37,10 +37,10 @@ trait Observable
      * @param \Closure|EventHandlerInterface|string $handler
      * @param \Closure|EventHandlerInterface|string $condition
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Clauses\Clause
+     * @return \OtkurBiz\jdy\Kernel\Clauses\Clause
      */
     public function push($handler, $condition = '*')
     {
@@ -57,10 +57,10 @@ trait Observable
      * @param \Closure|EventHandlerInterface|string $handler
      * @param \Closure|EventHandlerInterface|string $condition
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Clauses\Clause
+     * @return \OtkurBiz\jdy\Kernel\Clauses\Clause
      */
     public function unshift($handler, $condition = '*')
     {
@@ -77,9 +77,9 @@ trait Observable
      * @param string                                $condition
      * @param \Closure|EventHandlerInterface|string $handler
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Clauses\Clause
+     * @return \OtkurBiz\jdy\Kernel\Clauses\Clause
      */
     public function observe($condition, $handler)
     {
@@ -90,9 +90,9 @@ trait Observable
      * @param string                                $condition
      * @param \Closure|EventHandlerInterface|string $handler
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Clauses\Clause
+     * @return \OtkurBiz\jdy\Kernel\Clauses\Clause
      */
     public function on($condition, $handler)
     {
@@ -156,7 +156,7 @@ trait Observable
     /**
      * @param mixed $handler
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Clauses\Clause
+     * @return \OtkurBiz\jdy\Kernel\Clauses\Clause
      */
     protected function newClause($handler): Clause
     {
@@ -188,7 +188,7 @@ trait Observable
     /**
      * @param $handler
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      *
      * @return \Closure
@@ -223,7 +223,7 @@ trait Observable
      * @param $handler
      * @param $condition
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      * @throws \ReflectionException
      *
      * @return array

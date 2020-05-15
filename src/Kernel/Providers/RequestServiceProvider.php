@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Providers;
+namespace OtkurBiz\jdy\Kernel\Providers;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

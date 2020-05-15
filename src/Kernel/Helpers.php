@@ -8,12 +8,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel;
+namespace OtkurBiz\jdy\Kernel;
 
-use OtkurBiz\ByteDance\Kernel\Contracts\Arrayable;
-use OtkurBiz\ByteDance\Kernel\Exceptions\RuntimeException;
-use OtkurBiz\ByteDance\Kernel\Support\Arr;
-use OtkurBiz\ByteDance\Kernel\Support\Collection;
+use OtkurBiz\jdy\Kernel\Contracts\Arrayable;
+use OtkurBiz\jdy\Kernel\Exceptions\RuntimeException;
+use OtkurBiz\jdy\Kernel\Support\Arr;
+use OtkurBiz\jdy\Kernel\Support\Collection;
 
 function data_get($data, $key, $default = null)
 {

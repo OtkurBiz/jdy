@@ -1,9 +1,9 @@
 <?php
 
-namespace OtkruBiz\ByteDance;
+namespace OtkruBiz\jdy;
 
-use OtkurBiz\ByteDance\Factory;
-use OtkurBiz\ByteDance\MiniProgram\Application as MiniProgram;
+use OtkurBiz\jdy\Factory;
+use OtkurBiz\jdy\MiniProgram\Application as MiniProgram;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Laravel\Lumen\Application as LumenApplication;
@@ -23,15 +23,15 @@ class ServiceProvider extends LaravelServiceProvider
      */
     protected function setupConfig()
     {
-        $source = realpath(__DIR__.'/config/bytedance.php');
+        $source = realpath( __DIR__ . '/config/jdy.php' );
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('bytedance.php')], 'bytedance');
+            $this->publishes([$source => config_path('jdy.php')], 'jdy');
         } elseif ($this->app instanceof LumenApplication) {
-            $this->app->configure('bytedance');
+            $this->app->configure('jdy');
         }
 
-        $this->mergeConfigFrom($source, 'bytedance');
+        $this->mergeConfigFrom($source, 'jdy');
     }
 
     /**
@@ -46,23 +46,23 @@ class ServiceProvider extends LaravelServiceProvider
         ];
 
         foreach ($apps as $name => $class) {
-            if (empty(config('bytedance.'.$name))) {
+            if (empty(config('jdy.'.$name))) {
                 continue;
             }
 
-            if (!empty(config('bytedance.'.$name.'.app_id')) ) {
+            if (!empty(config('jdy.'.$name.'.app_id')) ) {
                 $accounts = [
-                    'default' => config('bytedance.'.$name),
+                    'default' => config('jdy.'.$name),
                 ];
-                config(['bytedance.'.$name.'.default' => $accounts['default']]);
+                config(['jdy.'.$name.'.default' => $accounts['default']]);
             } else {
-                $accounts = config('bytedance.'.$name);
+                $accounts = config('jdy.'.$name);
             }
 
             foreach ($accounts as $account => $config) {
-                $this->app->singleton("bytedance.{$name}.{$account}", function ($laravelApp) use ($name, $account, $config, $class) {
-                    $app = new $class(array_merge(config('bytedance.defaults', []), $config));
-                    if (config('bytedance.defaults.use_laravel_cache')) {
+                $this->app->singleton("jdy.{$name}.{$account}", function ($laravelApp) use ($name, $account, $config, $class) {
+                    $app = new $class(array_merge(config('jdy.defaults', []), $config));
+                    if (config('jdy.defaults.use_laravel_cache')) {
                         $app['cache'] = $laravelApp['cache.store'];
                     }
                     $app['request'] = $laravelApp['request'];
@@ -70,9 +70,9 @@ class ServiceProvider extends LaravelServiceProvider
                     return $app;
                 });
             }
-            $this->app->alias("bytedance.{$name}.default", 'bytedance.'.$name);
+            $this->app->alias("jdy.{$name}.default", 'jdy.'.$name);
 
-            $this->app->alias('bytedance.'.$name, $class);
+            $this->app->alias('jdy.'.$name, $class);
         }
     }
 }

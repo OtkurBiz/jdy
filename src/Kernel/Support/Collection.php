@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Support;
+namespace OtkurBiz\jdy\Kernel\Support;
 
 use ArrayAccess;
 use ArrayIterator;
 use Countable;
 use IteratorAggregate;
 use JsonSerializable;
-use OtkurBiz\ByteDance\Kernel\Contracts\Arrayable;
+use OtkurBiz\jdy\Kernel\Contracts\Arrayable;
 use Serializable;
 
 /**
@@ -58,7 +58,7 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
      *
      * @param array $keys
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Support\Collection
+     * @return \OtkurBiz\jdy\Kernel\Support\Collection
      */
     public function only(array $keys)
     {
@@ -94,7 +94,7 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
      *
      * @param Collection|array $items
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Support\Collection
+     * @return \OtkurBiz\jdy\Kernel\Support\Collection
      */
     public function merge($items)
     {

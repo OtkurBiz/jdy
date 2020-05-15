@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OtkurBiz/ByteDance.
+ * This file is part of the OtkurBiz/jdy.
  *
  * (c) alim <alim@bulutbazar.com>
  *
@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\MiniProgram\Message;
+namespace OtkurBiz\jdy\MiniProgram\Message;
 
-use OtkurBiz\ByteDance\Kernel\BaseClient;
+use OtkurBiz\jdy\Kernel\BaseClient;
 
 /**
  * Class Client.
@@ -36,7 +36,7 @@ class Client extends BaseClient
      * eg: {"access_token": "YOUR_ACCESS_TOKEN", "app_id": "YOUR_APP_ID", "data": {"keyword1": {"value": "v1"}, "keyword2": {"value": "v2"}}, "page": "pages/index", "form_id": "YOUR_FORM_ID", "touser": "USER_OPEN_ID", "template_id": "YOUR_TPL_ID"}
      *
      * @return \Psr\Http\Message\ResponseInterface|\EasyWeChat\Kernel\Support\Collection|array|object|string
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      */
     public function create(string $touser, string $template_id, string $page, string $form_id, mixed $data)
     {

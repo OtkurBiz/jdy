@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\jdy\MiniProgram;
+namespace OtkurBiz\jdy\Auth;
 
 use OtkurBiz\jdy\Kernel\ServiceContainer;
 
@@ -16,10 +16,6 @@ use OtkurBiz\jdy\Kernel\ServiceContainer;
  * Class Application.
  *
  * @property \OtkurBiz\jdy\MiniProgram\Auth\AccessToken $access_token
- * @property \OtkurBiz\jdy\MiniProgram\Auth\Client $auth
- * @property \OtkurBiz\jdy\MiniProgram\KVData\Client $kv
- * @property \OtkurBiz\jdy\MiniProgram\QRCode\Client $qrcode
- * @property \OtkurBiz\jdy\MiniProgram\Message\Client $message
  */
 class Application extends ServiceContainer
 {
@@ -27,9 +23,6 @@ class Application extends ServiceContainer
      * @var array
      */
     protected $providers = [
-        Auth\ServiceProvider::class,
-        KVData\ServiceProvider::class,
-        QRCode\ServiceProvider::class,
-        Message\ServiceProvider::class,
+        OAuth\ServiceProvider::class,
     ];
 }

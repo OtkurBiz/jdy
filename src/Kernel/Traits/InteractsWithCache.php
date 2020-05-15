@@ -8,11 +8,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Traits;
+namespace OtkurBiz\jdy\Kernel\Traits;
 
 use Doctrine\Common\Cache\Cache;
 use Doctrine\Common\Cache\FilesystemCache;
-use OtkurBiz\ByteDance\Kernel\ServiceContainer;
+use OtkurBiz\jdy\Kernel\ServiceContainer;
 use Psr\SimpleCache\CacheInterface;
 
 /**

@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Http;
+namespace OtkurBiz\jdy\Kernel\Http;
 
 use GuzzleHttp\Psr7\Response as GuzzleResponse;
-use OtkurBiz\ByteDance\Kernel\Support\Collection;
+use OtkurBiz\jdy\Kernel\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -37,7 +37,7 @@ class Response extends GuzzleResponse
     /**
      * @param \Psr\Http\Message\ResponseInterface $response
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Http\Response
+     * @return \OtkurBiz\jdy\Kernel\Http\Response
      */
     public static function buildFromPsrResponse(ResponseInterface $response)
     {
@@ -81,7 +81,7 @@ class Response extends GuzzleResponse
     /**
      * Get collection data.
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Support\Collection
+     * @return \OtkurBiz\jdy\Kernel\Support\Collection
      */
     public function toCollection()
     {

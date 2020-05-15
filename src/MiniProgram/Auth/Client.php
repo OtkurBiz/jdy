@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\MiniProgram\Auth;
+namespace OtkurBiz\jdy\MiniProgram\Auth;
 
-use OtkurBiz\ByteDance\Kernel\BaseClient;
+use OtkurBiz\jdy\Kernel\BaseClient;
 
 /**
  * Class Auth.
@@ -25,9 +25,9 @@ class Client extends BaseClient
      *
      * @param string $code
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
-     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\ByteDance\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\jdy\Kernel\Support\Collection|array|object|string
      */
     public function session(string $code, bool $anonymous = false)
     {

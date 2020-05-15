@@ -1,6 +1,6 @@
 {
-    "name": "otkurbiz\/bytedance",
-    "description": "sdk for bytedance (douyin, toutiao, huoshan, xigua)",
+    "name": "otkurbiz\/jdy",
+    "description": "sdk for jdy.com, 精斗云开放平台（JOP）是基于精斗云财务融合业务的开放平台。精斗云开放平台向合作伙伴和用户提供财务、进销存、电商、订货、零售、商品等数据服务，协助企业打通业务和财务的数据连接的通道，助力企业发展。 精斗云开放平台致力与企业开发者共同打造成长型企业的生态平台。",
     "license": "MIT",
     "authors": [
         {
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "OtkurBiz\\ByteDance\\": "src"
+            "OtkurBiz\\jdy\\": "src"
         }
     },
     "require-dev": {
@@ -30,10 +30,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "OtkurBiz\\ByteDance\\ServiceProvider"
+                "OtkurBiz\\jdy\\ServiceProvider"
             ],
             "aliases": {
-                "ByteDance": "Overtrue\\ByteDance\\Facade"
+                "jdy": "OtkurBiz\\jdy\\Facade"
             }
         }
     }

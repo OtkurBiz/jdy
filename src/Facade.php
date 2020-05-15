@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the otkurbiz/bytedance.
+ * This file is part of the otkurbiz/jdy.
  *
  * (c) alim <alim@bulutbazar.com>
  *
@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance;
+namespace OtkurBiz\jdy;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
@@ -27,14 +27,14 @@ class Facade extends LaravelFacade
      */
     public static function getFacadeAccessor()
     {
-        return 'bytedance.mini_program';
+        return 'jdy.mini_program';
     }
 
     /**
-     * @return \OtkurBiz\ByteDance\MiniProgram\Application
+     * @return \OtkurBiz\jdy\MiniProgram\Application
      */
     public static function miniProgram($name = '')
     {
-        return $name ? app('bytedance.mini_program.'.$name) : app('bytedance.mini_program');
+        return $name ? app('jdy.mini_program.'.$name) : app('jdy.mini_program');
     }
 }

@@ -1,6 +1,6 @@
-<h1 align="left"><a href="#">ByteDance SDK</a></h1>
+<h1 align="left"><a href="#">jdy SDK</a></h1>
 
-📦 字节跳动PHP SDK 抖音小程序、头条小程序开发组件。PHP SDK for bytedance (douyin, tiktok, toutiao)
+📦 字节跳动PHP SDK 抖音小程序、头条小程序开发组件。PHP SDK for jdy (douyin, tiktok, toutiao)
 
 
 ## Requirement
@@ -13,7 +13,7 @@
 ## Installation
 
 ```shell
-$ composer require "otkurbiz/bytedance" -vvv
+$ composer require "otkurbiz/jdy" -vvv
 ```
 
 ## Usage
@@ -43,7 +43,7 @@ Coming soon
 
 ## Integration
 
-[Laravel 5 拓展包: otkurbiz/laravel-bytedance](https://github.com/otkurbiz/laravel-bytedance)
+[Laravel 5 拓展包: otkurbiz/laravel-jdy](https://github.com/otkurbiz/laravel-jdy)
 
 ## Contributors
 
@@ -55,4 +55,4 @@ MIT
 ## Special Thanks
 [@overtrue](https://github.com/overtrue)
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fotkurbiz%2Fbytedance.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fovertrue%2Fwechat?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fotkurbiz%2Fjdy.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fovertrue%2Fwechat?ref=badge_large)

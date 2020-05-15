@@ -8,24 +8,24 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance;
+namespace OtkurBiz\jdy;
 
 /**
  * Class Factory.
  *
- * @method static \OtkurBiz\ByteDance\Application    bytedance(array $config)
+ * @method static \OtkurBiz\jdy\Application    jdy(array $config)
  */
 class Factory
 {
     /**
      * @param array $config
      *
-     * @return \OtkurBiz\ByteDance\Application
+     * @return \OtkurBiz\jdy\Application
      */
-    public static function make(array $config, $name = 'miniProgram')
+    public static function make(array $config, $name = 'auth')
     {
         $namespace = Kernel\Support\Str::studly($name);
-        $application = "\\OtkurBiz\\ByteDance\\{$namespace}\\Application";
+        $application = "\\OtkurBiz\\jdy\\{$namespace}\\Application";
 
         return new $application($config);
     }

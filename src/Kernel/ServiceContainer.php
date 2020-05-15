@@ -8,12 +8,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel;
+namespace OtkurBiz\jdy\Kernel;
 
-use OtkurBiz\ByteDance\Kernel\Providers\ConfigServiceProvider;
-use OtkurBiz\ByteDance\Kernel\Providers\HttpClientServiceProvider;
-use OtkurBiz\ByteDance\Kernel\Providers\LogServiceProvider;
-use OtkurBiz\ByteDance\Kernel\Providers\RequestServiceProvider;
+use OtkurBiz\jdy\Kernel\Providers\ConfigServiceProvider;
+use OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider;
+use OtkurBiz\jdy\Kernel\Providers\LogServiceProvider;
+use OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider;
 use Pimple\Container;
 
 /**
@@ -21,7 +21,7 @@ use Pimple\Container;
  *
  * @author overtrue <i@overtrue.me>
  *
- * @property \OtkurBiz\ByteDance\Kernel\Config                 $config
+ * @property \OtkurBiz\jdy\Kernel\Config                 $config
  * @property \Symfony\Component\HttpFoundation\Request $request
  * @property \GuzzleHttp\Client                        $http_client
  * @property \Monolog\Logger                           $logger
@@ -77,7 +77,7 @@ class ServiceContainer extends Container
             // http://docs.guzzlephp.org/en/stable/request-options.html
             'http' => [
                 'timeout'  => 30.0,
-                'base_uri' => 'https://developer.toutiao.com/',
+                'base_uri' => 'https://api.kingdee.com/',
             ],
         ];
 

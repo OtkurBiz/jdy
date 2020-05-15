@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the otkurbiz/bytedance.
+ * This file is part of the otkurbiz/jdy.
  *
  * (c) alim <alim@bulutbazar.com>
  *
@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\MiniProgram\KVData;
+namespace OtkurBiz\jdy\Auth\OAuth;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -25,8 +25,8 @@ class ServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $app)
     {
-        !isset($app['kv']) && $app['kv'] = function ($app) {
-            return new Client($app);
+        !isset($app['access_token']) && $app['access_token'] = function ($app) {
+            return new AccessToken($app);
         };
     }
 }

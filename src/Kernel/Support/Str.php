@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Support;
+namespace OtkurBiz\jdy\Kernel\Support;
 
-use OtkurBiz\ByteDance\Kernel\Exceptions\RuntimeException;
+use OtkurBiz\jdy\Kernel\Exceptions\RuntimeException;
 
 /**
  * Class Str.

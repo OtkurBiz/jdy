@@ -8,9 +8,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel;
+namespace OtkurBiz\jdy\Kernel;
 
-use OtkurBiz\ByteDance\Kernel\Support\Collection;
+use OtkurBiz\jdy\Kernel\Support\Collection;
 
 /**
  * Class Config.

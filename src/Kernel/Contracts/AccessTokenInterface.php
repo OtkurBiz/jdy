@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Contracts;
+namespace OtkurBiz\jdy\Kernel\Contracts;
 
 use Psr\Http\Message\RequestInterface;
 
@@ -25,7 +25,7 @@ interface AccessTokenInterface
     public function getToken(): array;
 
     /**
-     * @return \OtkurBiz\ByteDance\Kernel\Contracts\AccessTokenInterface
+     * @return \OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface
      */
     public function refresh(): self;
 

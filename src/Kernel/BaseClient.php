@@ -8,13 +8,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel;
+namespace OtkurBiz\jdy\Kernel;
 
 use GuzzleHttp\MessageFormatter;
 use GuzzleHttp\Middleware;
-use OtkurBiz\ByteDance\Kernel\Contracts\AccessTokenInterface;
-use OtkurBiz\ByteDance\Kernel\Http\Response;
-use OtkurBiz\ByteDance\Kernel\Traits\HasHttpRequests;
+use OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface;
+use OtkurBiz\jdy\Kernel\Http\Response;
+use OtkurBiz\jdy\Kernel\Traits\HasHttpRequests;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -27,11 +27,11 @@ class BaseClient
 {
     use HasHttpRequests { request as performRequest; }
     /**
-     * @var \OtkurBiz\ByteDance\Kernel\ServiceContainer
+     * @var \OtkurBiz\jdy\Kernel\ServiceContainer
      */
     protected $app;
     /**
-     * @var \OtkurBiz\ByteDance\Kernel\Contracts\AccessTokenInterface
+     * @var \OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface
      */
     protected $accessToken;
     /**
@@ -42,8 +42,8 @@ class BaseClient
     /**
      * BaseClient constructor.
      *
-     * @param \OtkurBiz\ByteDance\Kernel\ServiceContainer                    $app
-     * @param \OtkurBiz\ByteDance\Kernel\Contracts\AccessTokenInterface|null $accessToken
+     * @param \OtkurBiz\jdy\Kernel\ServiceContainer                    $app
+     * @param \OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface|null $accessToken
      */
     public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null)
     {
@@ -57,9 +57,9 @@ class BaseClient
      * @param string $url
      * @param array  $query
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
-     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\ByteDance\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\jdy\Kernel\Support\Collection|array|object|string
      */
     public function httpGet(string $url, array $query = [])
     {
@@ -72,9 +72,9 @@ class BaseClient
      * @param string $url
      * @param array  $data
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
-     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\ByteDance\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\jdy\Kernel\Support\Collection|array|object|string
      */
     public function httpPost(string $url, array $data = [])
     {
@@ -88,9 +88,9 @@ class BaseClient
      * @param string|array $data
      * @param array        $query
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
-     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\ByteDance\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\jdy\Kernel\Support\Collection|array|object|string
      */
     public function httpPostJson(string $url, array $data = [], array $query = [])
     {
@@ -105,9 +105,9 @@ class BaseClient
      * @param array  $form
      * @param array  $query
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
-     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\ByteDance\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\jdy\Kernel\Support\Collection|array|object|string
      */
     public function httpUpload(string $url, array $files = [], array $form = [], array $query = [])
     {
@@ -134,7 +134,7 @@ class BaseClient
     }
 
     /**
-     * @param \OtkurBiz\ByteDance\Kernel\Contracts\AccessTokenInterface $accessToken
+     * @param \OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface $accessToken
      *
      * @return $this
      */
@@ -151,9 +151,9 @@ class BaseClient
      * @param array  $options
      * @param bool   $returnRaw
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
-     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\ByteDance\Kernel\Support\Collection|array|object|string
+     * @return \Psr\Http\Message\ResponseInterface|\OtkurBiz\jdy\Kernel\Support\Collection|array|object|string
      */
     public function request(string $url, string $method = 'GET', array $options = [], $returnRaw = false)
     {
@@ -170,9 +170,9 @@ class BaseClient
      * @param string $method
      * @param array  $options
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
-     * @return \OtkurBiz\ByteDance\Kernel\Http\Response
+     * @return \OtkurBiz\jdy\Kernel\Http\Response
      */
     public function requestRaw(string $url, string $method = 'GET', array $options = [])
     {

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the OtkurBiz/ByteDance.
+ * This file is part of the OtkurBiz/jdy.
  *
  * (c) alim <alim@bulutbazar.com>
  *
@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\MiniProgram\QRCode;
+namespace OtkurBiz\jdy\MiniProgram\QRCode;
 
-use OtkurBiz\ByteDance\Kernel\BaseClient;
+use OtkurBiz\jdy\Kernel\BaseClient;
 
 /**
  * Class Client.
@@ -35,7 +35,7 @@ class Client extends BaseClient
      * background	否		二维码背景颜色，默认为透明
      * set_icon	否	FALSE	是否展示小程序/小游戏 icon，默认不展示
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
      * @return \Psr\Http\Message\ResponseInterface|\EasyWeChat\Kernel\Support\Collection|array|object|string
      */

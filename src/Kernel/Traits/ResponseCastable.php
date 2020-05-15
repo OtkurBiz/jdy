@@ -8,12 +8,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\ByteDance\Kernel\Traits;
+namespace OtkurBiz\jdy\Kernel\Traits;
 
-use OtkurBiz\ByteDance\Kernel\Contracts\Arrayable;
-use OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException;
-use OtkurBiz\ByteDance\Kernel\Http\Response;
-use OtkurBiz\ByteDance\Kernel\Support\Collection;
+use OtkurBiz\jdy\Kernel\Contracts\Arrayable;
+use OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException;
+use OtkurBiz\jdy\Kernel\Http\Response;
+use OtkurBiz\jdy\Kernel\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -27,9 +27,9 @@ trait ResponseCastable
      * @param \Psr\Http\Message\ResponseInterface $response
      * @param string|null                         $type
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
      *
-     * @return array|\OtkurBiz\ByteDance\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @return array|\OtkurBiz\jdy\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     protected function castResponseToType(ResponseInterface $response, $type = null)
     {
@@ -60,10 +60,10 @@ trait ResponseCastable
      * @param mixed       $response
      * @param string|null $type
      *
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidArgumentException
-     * @throws \OtkurBiz\ByteDance\Kernel\Exceptions\InvalidConfigException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidArgumentException
+     * @throws \OtkurBiz\jdy\Kernel\Exceptions\InvalidConfigException
      *
-     * @return array|\OtkurBiz\ByteDance\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @return array|\OtkurBiz\jdy\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      */
     protected function detectAndCastResponseToType($response, $type = null)
     {
