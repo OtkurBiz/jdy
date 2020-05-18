@@ -6,7 +6,7 @@ use Psr\Http\Message\RequestInterface;
 
 class JdyScmClient extends BaseClient {
 
-    protected function dbldMiddleware()
+    protected function dbIdMiddleware()
     {
         return function (callable $handler) {
             return function (RequestInterface $request, array $options) use ($handler) {
@@ -28,14 +28,14 @@ class JdyScmClient extends BaseClient {
 
     private function getQuery(): array
     {
-        return ['dbld' => $this->app['config']['dbld']];
+        return ['dbId' => $this->app['config']['dbId']];
     }
 
 
     public function request(string $url, string $method = 'GET', array $options = [], $returnRaw = false)
     {
         $this->registerHttpMiddlewares();
-        $this->pushMiddleware($this->dbldMiddleware(), 'dbld');
+        $this->pushMiddleware($this->dbIdMiddleware(), 'dbId');
         return parent::request($url, $method, $options, $returnRaw);
 
     }

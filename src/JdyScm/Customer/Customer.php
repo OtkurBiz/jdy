@@ -21,15 +21,23 @@ use OtkurBiz\jdy\Kernel\BaseClient;
  *
  * @author alim
  */
-class Customer extends BaseClient
+class Customer extends JdyScmClient
 {
     /*
      * 查询客户列表
      * 获取精斗云进销存V3系统的客户列表（支持过滤）
      */
-    public function customerList()
+    public function customerList($filter = [])
     {
-        return $this->httpPost('jdyscm/customer/list', ['dbld'=>$this->app['config']['dbld']]);
+        return $this->httpPostJson('jdyscm/customer/list', ['filter'=>$filter]);
+    }
+
+    public function addCustomer($data){
+        return $this->httpPostJson('jdyscm/customer/add', ['items'=>[$data]]);
+    }
+
+    public function addCustomers($items){
+        return $this->httpPost('jdyscm/customer/add', ['items'=>$items]);
     }
 
 }

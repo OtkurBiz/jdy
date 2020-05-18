@@ -34,9 +34,9 @@ class System extends BaseClient
      * 查询系统参数
      * 获取精斗云进销存V3系统的系统参数设置
      */
-    public function profile(int $dbld){
+    public function profile(int $dbId){
 
-        $params = ['dbId'=>$dbld];
+        $params = ['dbId'=>$dbId];
         return $this->httpGet('jdyscm/profile/query', $params);
     }
 }
