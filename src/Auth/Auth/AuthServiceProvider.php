@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\jdy\Auth\OAuth;
+namespace OtkurBiz\jdy\Auth\Auth;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -18,7 +18,7 @@ use Pimple\ServiceProviderInterface;
  *
  * @author alim <alim@bulutbazar.com>
  */
-class ServiceProvider implements ServiceProviderInterface
+class AuthServiceProvider implements ServiceProviderInterface
 {
     /**
      * {@inheritdoc}.
@@ -27,6 +27,14 @@ class ServiceProvider implements ServiceProviderInterface
     {
         !isset($app['access_token']) && $app['access_token'] = function ($app) {
             return new AccessToken($app);
+        };
+
+        !isset($app['auth_code']) && $app['auth_code'] = function ($app) {
+            return new AuthCode($app);
+        };
+
+        !isset($app['org_access_token']) && $app['org_access_token'] = function ($app) {
+            return new OrgAccessToken($app);
         };
     }
 }

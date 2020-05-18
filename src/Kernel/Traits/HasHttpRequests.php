@@ -1,8 +1,8 @@
 <?php
 /*
- * This file is part of the overtrue/wechat.
  *
- * (c) overtrue <i@overtrue.me>
+ *
+
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -18,7 +18,7 @@ use Psr\Http\Message\ResponseInterface;
 /**
  * Trait HasHttpRequests.
  *
- * @author overtrue <i@overtrue.me>
+ * @author alim <alim@bulutbazar.com>
  */
 trait HasHttpRequests
 {
@@ -136,12 +136,14 @@ trait HasHttpRequests
      */
     public function request($url, $method = 'GET', $options = []): ResponseInterface
     {
+
         $method = strtoupper($method);
         $options = array_merge(self::$defaults, $options, ['handler' => $this->getHandlerStack()]);
         $options = $this->fixJsonIssue($options);
         if (property_exists($this, 'baseUri') && !is_null($this->baseUri)) {
             $options['base_uri'] = $this->baseUri;
         }
+
         $response = $this->getHttpClient()->request($method, $url, $options);
         $response->getBody()->rewind();
 

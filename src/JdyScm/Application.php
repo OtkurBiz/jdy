@@ -8,9 +8,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\jdy\Auth;
+namespace OtkurBiz\jdy\JdyScm;
 
 use OtkurBiz\jdy\Auth\Auth\AuthServiceProvider;
+use OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider;
 use OtkurBiz\jdy\Kernel\ServiceContainer;
 
 /**
@@ -25,5 +26,7 @@ class Application extends ServiceContainer
      */
     protected $providers = [
         AuthServiceProvider::class,
+        System\ServiceProvider::class,
+        CustomerServiceProvider::class,
     ];
 }

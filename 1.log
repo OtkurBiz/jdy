@@ -1,0 +1,4273 @@
+PHPUnit 7.5.20 by Sebastian Bergmann and contributors.
+
+string(20) "jdyscm/customer/list"
+string(3) "GET"
+array(3) {
+  ["curl"]=>
+  array(1) {
+    [113]=>
+    int(1)
+  }
+  ["query"]=>
+  array(0) {
+  }
+  ["handler"]=>
+  object(GuzzleHttp\HandlerStack)#68 (3) {
+    ["handler":"GuzzleHttp\HandlerStack":private]=>
+    object(Closure)#67 (2) {
+      ["static"]=>
+      array(2) {
+        ["default"]=>
+        object(Closure)#65 (2) {
+          ["static"]=>
+          array(2) {
+            ["default"]=>
+            object(GuzzleHttp\Handler\CurlMultiHandler)#61 (5) {
+              ["factory":"GuzzleHttp\Handler\CurlMultiHandler":private]=>
+              object(GuzzleHttp\Handler\CurlFactory)#62 (2) {
+                ["handles":"GuzzleHttp\Handler\CurlFactory":private]=>
+                NULL
+                ["maxHandles":"GuzzleHttp\Handler\CurlFactory":private]=>
+                int(50)
+              }
+              ["selectTimeout":"GuzzleHttp\Handler\CurlMultiHandler":private]=>
+              int(1)
+              ["active":"GuzzleHttp\Handler\CurlMultiHandler":private]=>
+              NULL
+              ["handles":"GuzzleHttp\Handler\CurlMultiHandler":private]=>
+              array(0) {
+              }
+              ["delays":"GuzzleHttp\Handler\CurlMultiHandler":private]=>
+              array(0) {
+              }
+            }
+            ["sync"]=>
+            object(GuzzleHttp\Handler\CurlHandler)#63 (1) {
+              ["factory":"GuzzleHttp\Handler\CurlHandler":private]=>
+              object(GuzzleHttp\Handler\CurlFactory)#64 (2) {
+                ["handles":"GuzzleHttp\Handler\CurlFactory":private]=>
+                NULL
+                ["maxHandles":"GuzzleHttp\Handler\CurlFactory":private]=>
+                int(3)
+              }
+            }
+          }
+          ["parameter"]=>
+          array(2) {
+            ["$request"]=>
+            string(10) "<required>"
+            ["$options"]=>
+            string(10) "<required>"
+          }
+        }
+        ["streaming"]=>
+        object(GuzzleHttp\Handler\StreamHandler)#66 (1) {
+          ["lastHeaders":"GuzzleHttp\Handler\StreamHandler":private]=>
+          array(0) {
+          }
+        }
+      }
+      ["parameter"]=>
+      array(2) {
+        ["$request"]=>
+        string(10) "<required>"
+        ["$options"]=>
+        string(10) "<required>"
+      }
+    }
+    ["stack":"GuzzleHttp\HandlerStack":private]=>
+    array(8) {
+      [0]=>
+      array(2) {
+        [0]=>
+        object(Closure)#69 (1) {
+          ["parameter"]=>
+          array(1) {
+            ["$handler"]=>
+            string(10) "<required>"
+          }
+        }
+        [1]=>
+        string(11) "http_errors"
+      }
+      [1]=>
+      array(2) {
+        [0]=>
+        object(Closure)#70 (1) {
+          ["parameter"]=>
+          array(1) {
+            ["$handler"]=>
+            string(10) "<required>"
+          }
+        }
+        [1]=>
+        string(15) "allow_redirects"
+      }
+      [2]=>
+      array(2) {
+        [0]=>
+        object(Closure)#71 (1) {
+          ["parameter"]=>
+          array(1) {
+            ["$handler"]=>
+            string(10) "<required>"
+          }
+        }
+        [1]=>
+        string(7) "cookies"
+      }
+      [3]=>
+      array(2) {
+        [0]=>
+        object(Closure)#72 (1) {
+          ["parameter"]=>
+          array(1) {
+            ["$handler"]=>
+            string(10) "<required>"
+          }
+        }
+        [1]=>
+        string(12) "prepare_body"
+      }
+      [4]=>
+      array(2) {
+        [0]=>
+        object(Closure)#56 (2) {
+          ["static"]=>
+          array(2) {
+            ["decider"]=>
+            object(Closure)#54 (2) {
+              ["this"]=>
+              object(OtkurBiz\jdy\JdyScm\Customer\Customer)#52 (6) {
+                ["app":protected]=>
+                object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                  ["providers":protected]=>
+                  array(3) {
+                    [0]=>
+                    string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                    [1]=>
+                    string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                    [2]=>
+                    string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                  }
+                  ["id":protected]=>
+                  NULL
+                  ["defaultConfig":protected]=>
+                  array(0) {
+                  }
+                  ["userConfig":protected]=>
+                  array(8) {
+                    ["SERVER_HOST"]=>
+                    string(24) "https://api.kingdee.com/"
+                    ["client_secret"]=>
+                    string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                    ["client_id"]=>
+                    string(6) "205798"
+                    ["dbld"]=>
+                    string(12) "792129189262"
+                    ["username"]=>
+                    string(10) "bulutbazar"
+                    ["password"]=>
+                    string(9) "bb2883535"
+                    ["tid"]=>
+                    string(0) ""
+                    ["secret"]=>
+                    string(0) ""
+                  }
+                  ["values":"Pimple\Container":private]=>
+                  array(10) {
+                    ["log"]=>
+                    object(Closure)#37 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["logger"]=>
+                    object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                      ["app":protected]=>
+                      *RECURSION*
+                      ["channels":protected]=>
+                      array(0) {
+                      }
+                      ["customCreators":protected]=>
+                      array(0) {
+                      }
+                      ["levels":protected]=>
+                      array(8) {
+                        ["debug"]=>
+                        int(100)
+                        ["info"]=>
+                        int(200)
+                        ["notice"]=>
+                        int(250)
+                        ["warning"]=>
+                        int(300)
+                        ["error"]=>
+                        int(400)
+                        ["critical"]=>
+                        int(500)
+                        ["alert"]=>
+                        int(550)
+                        ["emergency"]=>
+                        int(600)
+                      }
+                    }
+                    ["request"]=>
+                    object(Closure)#39 (1) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                      }
+                    }
+                    ["http_client"]=>
+                    object(Closure)#41 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["access_token"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                      ["endpointToGetToken":protected]=>
+                      string(46) "https://api.kingdee.com/auth/user/access_token"
+                      ["requestMethod":protected]=>
+                      string(3) "GET"
+                      ["app":protected]=>
+                      *RECURSION*
+                      ["queryName":protected]=>
+                      NULL
+                      ["token":protected]=>
+                      NULL
+                      ["safeSeconds":protected]=>
+                      int(500)
+                      ["tokenKey":protected]=>
+                      string(12) "access_token"
+                      ["cachePrefix":protected]=>
+                      string(33) "otkurbiz.jdy.kernel.access_token."
+                      ["httpClient":protected]=>
+                      NULL
+                      ["middlewares":protected]=>
+                      array(0) {
+                      }
+                      ["handlerStack":protected]=>
+                      NULL
+                      ["cache":protected]=>
+                      NULL
+                    }
+                    ["auth_code"]=>
+                    object(Closure)#44 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["org_access_token"]=>
+                    object(Closure)#45 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["system"]=>
+                    object(Closure)#47 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["customer"]=>
+                    *RECURSION*
+                    ["config"]=>
+                    object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                      ["items":protected]=>
+                      array(10) {
+                        ["http"]=>
+                        array(2) {
+                          ["timeout"]=>
+                          float(30)
+                          ["base_uri"]=>
+                          string(24) "https://api.kingdee.com/"
+                        }
+                        ["SERVER_HOST"]=>
+                        string(24) "https://api.kingdee.com/"
+                        ["client_secret"]=>
+                        string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                        ["client_id"]=>
+                        string(6) "205798"
+                        ["dbld"]=>
+                        string(12) "792129189262"
+                        ["username"]=>
+                        string(10) "bulutbazar"
+                        ["password"]=>
+                        string(9) "bb2883535"
+                        ["tid"]=>
+                        string(0) ""
+                        ["secret"]=>
+                        string(0) ""
+                        ["log"]=>
+                        array(2) {
+                          ["default"]=>
+                          string(8) "errorlog"
+                          ["channels"]=>
+                          array(1) {
+                            ["errorlog"]=>
+                            array(2) {
+                              ["driver"]=>
+                              string(8) "errorlog"
+                              ["level"]=>
+                              string(5) "debug"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  ["factories":"Pimple\Container":private]=>
+                  object(SplObjectStorage)#50 (1) {
+                    ["storage":"SplObjectStorage":private]=>
+                    array(0) {
+                    }
+                  }
+                  ["protected":"Pimple\Container":private]=>
+                  object(SplObjectStorage)#51 (1) {
+                    ["storage":"SplObjectStorage":private]=>
+                    array(0) {
+                    }
+                  }
+                  ["frozen":"Pimple\Container":private]=>
+                  array(3) {
+                    ["access_token"]=>
+                    bool(true)
+                    ["customer"]=>
+                    bool(true)
+                    ["logger"]=>
+                    bool(true)
+                  }
+                  ["raw":"Pimple\Container":private]=>
+                  array(3) {
+                    ["access_token"]=>
+                    object(Closure)#43 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["customer"]=>
+                    object(Closure)#49 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["logger"]=>
+                    object(Closure)#37 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                  }
+                  ["keys":"Pimple\Container":private]=>
+                  array(10) {
+                    ["log"]=>
+                    bool(true)
+                    ["logger"]=>
+                    bool(true)
+                    ["request"]=>
+                    bool(true)
+                    ["http_client"]=>
+                    bool(true)
+                    ["access_token"]=>
+                    bool(true)
+                    ["auth_code"]=>
+                    bool(true)
+                    ["org_access_token"]=>
+                    bool(true)
+                    ["system"]=>
+                    bool(true)
+                    ["customer"]=>
+                    bool(true)
+                    ["config"]=>
+                    bool(true)
+                  }
+                }
+                ["accessToken":protected]=>
+                object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                  ["endpointToGetToken":protected]=>
+                  string(46) "https://api.kingdee.com/auth/user/access_token"
+                  ["requestMethod":protected]=>
+                  string(3) "GET"
+                  ["app":protected]=>
+                  object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                    ["providers":protected]=>
+                    array(3) {
+                      [0]=>
+                      string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                      [1]=>
+                      string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                      [2]=>
+                      string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                    }
+                    ["id":protected]=>
+                    NULL
+                    ["defaultConfig":protected]=>
+                    array(0) {
+                    }
+                    ["userConfig":protected]=>
+                    array(8) {
+                      ["SERVER_HOST"]=>
+                      string(24) "https://api.kingdee.com/"
+                      ["client_secret"]=>
+                      string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                      ["client_id"]=>
+                      string(6) "205798"
+                      ["dbld"]=>
+                      string(12) "792129189262"
+                      ["username"]=>
+                      string(10) "bulutbazar"
+                      ["password"]=>
+                      string(9) "bb2883535"
+                      ["tid"]=>
+                      string(0) ""
+                      ["secret"]=>
+                      string(0) ""
+                    }
+                    ["values":"Pimple\Container":private]=>
+                    array(10) {
+                      ["log"]=>
+                      object(Closure)#37 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["logger"]=>
+                      object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                        ["app":protected]=>
+                        *RECURSION*
+                        ["channels":protected]=>
+                        array(0) {
+                        }
+                        ["customCreators":protected]=>
+                        array(0) {
+                        }
+                        ["levels":protected]=>
+                        array(8) {
+                          ["debug"]=>
+                          int(100)
+                          ["info"]=>
+                          int(200)
+                          ["notice"]=>
+                          int(250)
+                          ["warning"]=>
+                          int(300)
+                          ["error"]=>
+                          int(400)
+                          ["critical"]=>
+                          int(500)
+                          ["alert"]=>
+                          int(550)
+                          ["emergency"]=>
+                          int(600)
+                        }
+                      }
+                      ["request"]=>
+                      object(Closure)#39 (1) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                        }
+                      }
+                      ["http_client"]=>
+                      object(Closure)#41 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["access_token"]=>
+                      *RECURSION*
+                      ["auth_code"]=>
+                      object(Closure)#44 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["org_access_token"]=>
+                      object(Closure)#45 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["system"]=>
+                      object(Closure)#47 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["customer"]=>
+                      *RECURSION*
+                      ["config"]=>
+                      object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                        ["items":protected]=>
+                        array(10) {
+                          ["http"]=>
+                          array(2) {
+                            ["timeout"]=>
+                            float(30)
+                            ["base_uri"]=>
+                            string(24) "https://api.kingdee.com/"
+                          }
+                          ["SERVER_HOST"]=>
+                          string(24) "https://api.kingdee.com/"
+                          ["client_secret"]=>
+                          string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                          ["client_id"]=>
+                          string(6) "205798"
+                          ["dbld"]=>
+                          string(12) "792129189262"
+                          ["username"]=>
+                          string(10) "bulutbazar"
+                          ["password"]=>
+                          string(9) "bb2883535"
+                          ["tid"]=>
+                          string(0) ""
+                          ["secret"]=>
+                          string(0) ""
+                          ["log"]=>
+                          array(2) {
+                            ["default"]=>
+                            string(8) "errorlog"
+                            ["channels"]=>
+                            array(1) {
+                              ["errorlog"]=>
+                              array(2) {
+                                ["driver"]=>
+                                string(8) "errorlog"
+                                ["level"]=>
+                                string(5) "debug"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    ["factories":"Pimple\Container":private]=>
+                    object(SplObjectStorage)#50 (1) {
+                      ["storage":"SplObjectStorage":private]=>
+                      array(0) {
+                      }
+                    }
+                    ["protected":"Pimple\Container":private]=>
+                    object(SplObjectStorage)#51 (1) {
+                      ["storage":"SplObjectStorage":private]=>
+                      array(0) {
+                      }
+                    }
+                    ["frozen":"Pimple\Container":private]=>
+                    array(3) {
+                      ["access_token"]=>
+                      bool(true)
+                      ["customer"]=>
+                      bool(true)
+                      ["logger"]=>
+                      bool(true)
+                    }
+                    ["raw":"Pimple\Container":private]=>
+                    array(3) {
+                      ["access_token"]=>
+                      object(Closure)#43 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["customer"]=>
+                      object(Closure)#49 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["logger"]=>
+                      object(Closure)#37 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                    }
+                    ["keys":"Pimple\Container":private]=>
+                    array(10) {
+                      ["log"]=>
+                      bool(true)
+                      ["logger"]=>
+                      bool(true)
+                      ["request"]=>
+                      bool(true)
+                      ["http_client"]=>
+                      bool(true)
+                      ["access_token"]=>
+                      bool(true)
+                      ["auth_code"]=>
+                      bool(true)
+                      ["org_access_token"]=>
+                      bool(true)
+                      ["system"]=>
+                      bool(true)
+                      ["customer"]=>
+                      bool(true)
+                      ["config"]=>
+                      bool(true)
+                    }
+                  }
+                  ["queryName":protected]=>
+                  NULL
+                  ["token":protected]=>
+                  NULL
+                  ["safeSeconds":protected]=>
+                  int(500)
+                  ["tokenKey":protected]=>
+                  string(12) "access_token"
+                  ["cachePrefix":protected]=>
+                  string(33) "otkurbiz.jdy.kernel.access_token."
+                  ["httpClient":protected]=>
+                  NULL
+                  ["middlewares":protected]=>
+                  array(0) {
+                  }
+                  ["handlerStack":protected]=>
+                  NULL
+                  ["cache":protected]=>
+                  NULL
+                }
+                ["baseUri":protected]=>
+                NULL
+                ["httpClient":protected]=>
+                NULL
+                ["middlewares":protected]=>
+                array(4) {
+                  ["retry"]=>
+                  *RECURSION*
+                  ["access_token"]=>
+                  object(Closure)#57 (2) {
+                    ["this"]=>
+                    *RECURSION*
+                    ["parameter"]=>
+                    array(1) {
+                      ["$handler"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["log"]=>
+                  object(Closure)#34 (2) {
+                    ["static"]=>
+                    array(3) {
+                      ["logger"]=>
+                      object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                        ["app":protected]=>
+                        object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                          ["providers":protected]=>
+                          array(3) {
+                            [0]=>
+                            string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                            [1]=>
+                            string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                            [2]=>
+                            string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                          }
+                          ["id":protected]=>
+                          NULL
+                          ["defaultConfig":protected]=>
+                          array(0) {
+                          }
+                          ["userConfig":protected]=>
+                          array(8) {
+                            ["SERVER_HOST"]=>
+                            string(24) "https://api.kingdee.com/"
+                            ["client_secret"]=>
+                            string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                            ["client_id"]=>
+                            string(6) "205798"
+                            ["dbld"]=>
+                            string(12) "792129189262"
+                            ["username"]=>
+                            string(10) "bulutbazar"
+                            ["password"]=>
+                            string(9) "bb2883535"
+                            ["tid"]=>
+                            string(0) ""
+                            ["secret"]=>
+                            string(0) ""
+                          }
+                          ["values":"Pimple\Container":private]=>
+                          array(10) {
+                            ["log"]=>
+                            object(Closure)#37 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["logger"]=>
+                            *RECURSION*
+                            ["request"]=>
+                            object(Closure)#39 (1) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                              }
+                            }
+                            ["http_client"]=>
+                            object(Closure)#41 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["access_token"]=>
+                            object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                              ["endpointToGetToken":protected]=>
+                              string(46) "https://api.kingdee.com/auth/user/access_token"
+                              ["requestMethod":protected]=>
+                              string(3) "GET"
+                              ["app":protected]=>
+                              *RECURSION*
+                              ["queryName":protected]=>
+                              NULL
+                              ["token":protected]=>
+                              NULL
+                              ["safeSeconds":protected]=>
+                              int(500)
+                              ["tokenKey":protected]=>
+                              string(12) "access_token"
+                              ["cachePrefix":protected]=>
+                              string(33) "otkurbiz.jdy.kernel.access_token."
+                              ["httpClient":protected]=>
+                              NULL
+                              ["middlewares":protected]=>
+                              array(0) {
+                              }
+                              ["handlerStack":protected]=>
+                              NULL
+                              ["cache":protected]=>
+                              NULL
+                            }
+                            ["auth_code"]=>
+                            object(Closure)#44 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["org_access_token"]=>
+                            object(Closure)#45 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["system"]=>
+                            object(Closure)#47 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["customer"]=>
+                            *RECURSION*
+                            ["config"]=>
+                            object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                              ["items":protected]=>
+                              array(10) {
+                                ["http"]=>
+                                array(2) {
+                                  ["timeout"]=>
+                                  float(30)
+                                  ["base_uri"]=>
+                                  string(24) "https://api.kingdee.com/"
+                                }
+                                ["SERVER_HOST"]=>
+                                string(24) "https://api.kingdee.com/"
+                                ["client_secret"]=>
+                                string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                                ["client_id"]=>
+                                string(6) "205798"
+                                ["dbld"]=>
+                                string(12) "792129189262"
+                                ["username"]=>
+                                string(10) "bulutbazar"
+                                ["password"]=>
+                                string(9) "bb2883535"
+                                ["tid"]=>
+                                string(0) ""
+                                ["secret"]=>
+                                string(0) ""
+                                ["log"]=>
+                                array(2) {
+                                  ["default"]=>
+                                  string(8) "errorlog"
+                                  ["channels"]=>
+                                  array(1) {
+                                    ["errorlog"]=>
+                                    array(2) {
+                                      ["driver"]=>
+                                      string(8) "errorlog"
+                                      ["level"]=>
+                                      string(5) "debug"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          ["factories":"Pimple\Container":private]=>
+                          object(SplObjectStorage)#50 (1) {
+                            ["storage":"SplObjectStorage":private]=>
+                            array(0) {
+                            }
+                          }
+                          ["protected":"Pimple\Container":private]=>
+                          object(SplObjectStorage)#51 (1) {
+                            ["storage":"SplObjectStorage":private]=>
+                            array(0) {
+                            }
+                          }
+                          ["frozen":"Pimple\Container":private]=>
+                          array(3) {
+                            ["access_token"]=>
+                            bool(true)
+                            ["customer"]=>
+                            bool(true)
+                            ["logger"]=>
+                            bool(true)
+                          }
+                          ["raw":"Pimple\Container":private]=>
+                          array(3) {
+                            ["access_token"]=>
+                            object(Closure)#43 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["customer"]=>
+                            object(Closure)#49 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["logger"]=>
+                            object(Closure)#37 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                          }
+                          ["keys":"Pimple\Container":private]=>
+                          array(10) {
+                            ["log"]=>
+                            bool(true)
+                            ["logger"]=>
+                            bool(true)
+                            ["request"]=>
+                            bool(true)
+                            ["http_client"]=>
+                            bool(true)
+                            ["access_token"]=>
+                            bool(true)
+                            ["auth_code"]=>
+                            bool(true)
+                            ["org_access_token"]=>
+                            bool(true)
+                            ["system"]=>
+                            bool(true)
+                            ["customer"]=>
+                            bool(true)
+                            ["config"]=>
+                            bool(true)
+                          }
+                        }
+                        ["channels":protected]=>
+                        array(0) {
+                        }
+                        ["customCreators":protected]=>
+                        array(0) {
+                        }
+                        ["levels":protected]=>
+                        array(8) {
+                          ["debug"]=>
+                          int(100)
+                          ["info"]=>
+                          int(200)
+                          ["notice"]=>
+                          int(250)
+                          ["warning"]=>
+                          int(300)
+                          ["error"]=>
+                          int(400)
+                          ["critical"]=>
+                          int(500)
+                          ["alert"]=>
+                          int(550)
+                          ["emergency"]=>
+                          int(600)
+                        }
+                      }
+                      ["formatter"]=>
+                      object(GuzzleHttp\MessageFormatter)#58 (1) {
+                        ["template":"GuzzleHttp\MessageFormatter":private]=>
+                        string(55) ">>>>>>>>
+{request}
+<<<<<<<<
+{response}
+--------
+{error}"
+                      }
+                      ["logLevel"]=>
+                      string(4) "info"
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$handler"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["dbld"]=>
+                  object(Closure)#59 (2) {
+                    ["this"]=>
+                    *RECURSION*
+                    ["parameter"]=>
+                    array(1) {
+                      ["$handler"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                }
+                ["handlerStack":protected]=>
+                *RECURSION*
+              }
+              ["parameter"]=>
+              array(3) {
+                ["$retries"]=>
+                string(10) "<required>"
+                ["$request"]=>
+                string(10) "<required>"
+                ["$response"]=>
+                string(10) "<optional>"
+              }
+            }
+            ["delay"]=>
+            object(Closure)#55 (1) {
+              ["this"]=>
+              object(OtkurBiz\jdy\JdyScm\Customer\Customer)#52 (6) {
+                ["app":protected]=>
+                object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                  ["providers":protected]=>
+                  array(3) {
+                    [0]=>
+                    string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                    [1]=>
+                    string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                    [2]=>
+                    string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                  }
+                  ["id":protected]=>
+                  NULL
+                  ["defaultConfig":protected]=>
+                  array(0) {
+                  }
+                  ["userConfig":protected]=>
+                  array(8) {
+                    ["SERVER_HOST"]=>
+                    string(24) "https://api.kingdee.com/"
+                    ["client_secret"]=>
+                    string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                    ["client_id"]=>
+                    string(6) "205798"
+                    ["dbld"]=>
+                    string(12) "792129189262"
+                    ["username"]=>
+                    string(10) "bulutbazar"
+                    ["password"]=>
+                    string(9) "bb2883535"
+                    ["tid"]=>
+                    string(0) ""
+                    ["secret"]=>
+                    string(0) ""
+                  }
+                  ["values":"Pimple\Container":private]=>
+                  array(10) {
+                    ["log"]=>
+                    object(Closure)#37 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["logger"]=>
+                    object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                      ["app":protected]=>
+                      *RECURSION*
+                      ["channels":protected]=>
+                      array(0) {
+                      }
+                      ["customCreators":protected]=>
+                      array(0) {
+                      }
+                      ["levels":protected]=>
+                      array(8) {
+                        ["debug"]=>
+                        int(100)
+                        ["info"]=>
+                        int(200)
+                        ["notice"]=>
+                        int(250)
+                        ["warning"]=>
+                        int(300)
+                        ["error"]=>
+                        int(400)
+                        ["critical"]=>
+                        int(500)
+                        ["alert"]=>
+                        int(550)
+                        ["emergency"]=>
+                        int(600)
+                      }
+                    }
+                    ["request"]=>
+                    object(Closure)#39 (1) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                      }
+                    }
+                    ["http_client"]=>
+                    object(Closure)#41 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["access_token"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                      ["endpointToGetToken":protected]=>
+                      string(46) "https://api.kingdee.com/auth/user/access_token"
+                      ["requestMethod":protected]=>
+                      string(3) "GET"
+                      ["app":protected]=>
+                      *RECURSION*
+                      ["queryName":protected]=>
+                      NULL
+                      ["token":protected]=>
+                      NULL
+                      ["safeSeconds":protected]=>
+                      int(500)
+                      ["tokenKey":protected]=>
+                      string(12) "access_token"
+                      ["cachePrefix":protected]=>
+                      string(33) "otkurbiz.jdy.kernel.access_token."
+                      ["httpClient":protected]=>
+                      NULL
+                      ["middlewares":protected]=>
+                      array(0) {
+                      }
+                      ["handlerStack":protected]=>
+                      NULL
+                      ["cache":protected]=>
+                      NULL
+                    }
+                    ["auth_code"]=>
+                    object(Closure)#44 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["org_access_token"]=>
+                    object(Closure)#45 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["system"]=>
+                    object(Closure)#47 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["customer"]=>
+                    *RECURSION*
+                    ["config"]=>
+                    object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                      ["items":protected]=>
+                      array(10) {
+                        ["http"]=>
+                        array(2) {
+                          ["timeout"]=>
+                          float(30)
+                          ["base_uri"]=>
+                          string(24) "https://api.kingdee.com/"
+                        }
+                        ["SERVER_HOST"]=>
+                        string(24) "https://api.kingdee.com/"
+                        ["client_secret"]=>
+                        string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                        ["client_id"]=>
+                        string(6) "205798"
+                        ["dbld"]=>
+                        string(12) "792129189262"
+                        ["username"]=>
+                        string(10) "bulutbazar"
+                        ["password"]=>
+                        string(9) "bb2883535"
+                        ["tid"]=>
+                        string(0) ""
+                        ["secret"]=>
+                        string(0) ""
+                        ["log"]=>
+                        array(2) {
+                          ["default"]=>
+                          string(8) "errorlog"
+                          ["channels"]=>
+                          array(1) {
+                            ["errorlog"]=>
+                            array(2) {
+                              ["driver"]=>
+                              string(8) "errorlog"
+                              ["level"]=>
+                              string(5) "debug"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  ["factories":"Pimple\Container":private]=>
+                  object(SplObjectStorage)#50 (1) {
+                    ["storage":"SplObjectStorage":private]=>
+                    array(0) {
+                    }
+                  }
+                  ["protected":"Pimple\Container":private]=>
+                  object(SplObjectStorage)#51 (1) {
+                    ["storage":"SplObjectStorage":private]=>
+                    array(0) {
+                    }
+                  }
+                  ["frozen":"Pimple\Container":private]=>
+                  array(3) {
+                    ["access_token"]=>
+                    bool(true)
+                    ["customer"]=>
+                    bool(true)
+                    ["logger"]=>
+                    bool(true)
+                  }
+                  ["raw":"Pimple\Container":private]=>
+                  array(3) {
+                    ["access_token"]=>
+                    object(Closure)#43 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["customer"]=>
+                    object(Closure)#49 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["logger"]=>
+                    object(Closure)#37 (2) {
+                      ["this"]=>
+                      object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                      }
+                      ["parameter"]=>
+                      array(1) {
+                        ["$app"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                  }
+                  ["keys":"Pimple\Container":private]=>
+                  array(10) {
+                    ["log"]=>
+                    bool(true)
+                    ["logger"]=>
+                    bool(true)
+                    ["request"]=>
+                    bool(true)
+                    ["http_client"]=>
+                    bool(true)
+                    ["access_token"]=>
+                    bool(true)
+                    ["auth_code"]=>
+                    bool(true)
+                    ["org_access_token"]=>
+                    bool(true)
+                    ["system"]=>
+                    bool(true)
+                    ["customer"]=>
+                    bool(true)
+                    ["config"]=>
+                    bool(true)
+                  }
+                }
+                ["accessToken":protected]=>
+                object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                  ["endpointToGetToken":protected]=>
+                  string(46) "https://api.kingdee.com/auth/user/access_token"
+                  ["requestMethod":protected]=>
+                  string(3) "GET"
+                  ["app":protected]=>
+                  object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                    ["providers":protected]=>
+                    array(3) {
+                      [0]=>
+                      string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                      [1]=>
+                      string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                      [2]=>
+                      string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                    }
+                    ["id":protected]=>
+                    NULL
+                    ["defaultConfig":protected]=>
+                    array(0) {
+                    }
+                    ["userConfig":protected]=>
+                    array(8) {
+                      ["SERVER_HOST"]=>
+                      string(24) "https://api.kingdee.com/"
+                      ["client_secret"]=>
+                      string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                      ["client_id"]=>
+                      string(6) "205798"
+                      ["dbld"]=>
+                      string(12) "792129189262"
+                      ["username"]=>
+                      string(10) "bulutbazar"
+                      ["password"]=>
+                      string(9) "bb2883535"
+                      ["tid"]=>
+                      string(0) ""
+                      ["secret"]=>
+                      string(0) ""
+                    }
+                    ["values":"Pimple\Container":private]=>
+                    array(10) {
+                      ["log"]=>
+                      object(Closure)#37 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["logger"]=>
+                      object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                        ["app":protected]=>
+                        *RECURSION*
+                        ["channels":protected]=>
+                        array(0) {
+                        }
+                        ["customCreators":protected]=>
+                        array(0) {
+                        }
+                        ["levels":protected]=>
+                        array(8) {
+                          ["debug"]=>
+                          int(100)
+                          ["info"]=>
+                          int(200)
+                          ["notice"]=>
+                          int(250)
+                          ["warning"]=>
+                          int(300)
+                          ["error"]=>
+                          int(400)
+                          ["critical"]=>
+                          int(500)
+                          ["alert"]=>
+                          int(550)
+                          ["emergency"]=>
+                          int(600)
+                        }
+                      }
+                      ["request"]=>
+                      object(Closure)#39 (1) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                        }
+                      }
+                      ["http_client"]=>
+                      object(Closure)#41 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["access_token"]=>
+                      *RECURSION*
+                      ["auth_code"]=>
+                      object(Closure)#44 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["org_access_token"]=>
+                      object(Closure)#45 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["system"]=>
+                      object(Closure)#47 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["customer"]=>
+                      *RECURSION*
+                      ["config"]=>
+                      object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                        ["items":protected]=>
+                        array(10) {
+                          ["http"]=>
+                          array(2) {
+                            ["timeout"]=>
+                            float(30)
+                            ["base_uri"]=>
+                            string(24) "https://api.kingdee.com/"
+                          }
+                          ["SERVER_HOST"]=>
+                          string(24) "https://api.kingdee.com/"
+                          ["client_secret"]=>
+                          string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                          ["client_id"]=>
+                          string(6) "205798"
+                          ["dbld"]=>
+                          string(12) "792129189262"
+                          ["username"]=>
+                          string(10) "bulutbazar"
+                          ["password"]=>
+                          string(9) "bb2883535"
+                          ["tid"]=>
+                          string(0) ""
+                          ["secret"]=>
+                          string(0) ""
+                          ["log"]=>
+                          array(2) {
+                            ["default"]=>
+                            string(8) "errorlog"
+                            ["channels"]=>
+                            array(1) {
+                              ["errorlog"]=>
+                              array(2) {
+                                ["driver"]=>
+                                string(8) "errorlog"
+                                ["level"]=>
+                                string(5) "debug"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    ["factories":"Pimple\Container":private]=>
+                    object(SplObjectStorage)#50 (1) {
+                      ["storage":"SplObjectStorage":private]=>
+                      array(0) {
+                      }
+                    }
+                    ["protected":"Pimple\Container":private]=>
+                    object(SplObjectStorage)#51 (1) {
+                      ["storage":"SplObjectStorage":private]=>
+                      array(0) {
+                      }
+                    }
+                    ["frozen":"Pimple\Container":private]=>
+                    array(3) {
+                      ["access_token"]=>
+                      bool(true)
+                      ["customer"]=>
+                      bool(true)
+                      ["logger"]=>
+                      bool(true)
+                    }
+                    ["raw":"Pimple\Container":private]=>
+                    array(3) {
+                      ["access_token"]=>
+                      object(Closure)#43 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["customer"]=>
+                      object(Closure)#49 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["logger"]=>
+                      object(Closure)#37 (2) {
+                        ["this"]=>
+                        object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$app"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                    }
+                    ["keys":"Pimple\Container":private]=>
+                    array(10) {
+                      ["log"]=>
+                      bool(true)
+                      ["logger"]=>
+                      bool(true)
+                      ["request"]=>
+                      bool(true)
+                      ["http_client"]=>
+                      bool(true)
+                      ["access_token"]=>
+                      bool(true)
+                      ["auth_code"]=>
+                      bool(true)
+                      ["org_access_token"]=>
+                      bool(true)
+                      ["system"]=>
+                      bool(true)
+                      ["customer"]=>
+                      bool(true)
+                      ["config"]=>
+                      bool(true)
+                    }
+                  }
+                  ["queryName":protected]=>
+                  NULL
+                  ["token":protected]=>
+                  NULL
+                  ["safeSeconds":protected]=>
+                  int(500)
+                  ["tokenKey":protected]=>
+                  string(12) "access_token"
+                  ["cachePrefix":protected]=>
+                  string(33) "otkurbiz.jdy.kernel.access_token."
+                  ["httpClient":protected]=>
+                  NULL
+                  ["middlewares":protected]=>
+                  array(0) {
+                  }
+                  ["handlerStack":protected]=>
+                  NULL
+                  ["cache":protected]=>
+                  NULL
+                }
+                ["baseUri":protected]=>
+                NULL
+                ["httpClient":protected]=>
+                NULL
+                ["middlewares":protected]=>
+                array(4) {
+                  ["retry"]=>
+                  *RECURSION*
+                  ["access_token"]=>
+                  object(Closure)#57 (2) {
+                    ["this"]=>
+                    *RECURSION*
+                    ["parameter"]=>
+                    array(1) {
+                      ["$handler"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["log"]=>
+                  object(Closure)#34 (2) {
+                    ["static"]=>
+                    array(3) {
+                      ["logger"]=>
+                      object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                        ["app":protected]=>
+                        object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                          ["providers":protected]=>
+                          array(3) {
+                            [0]=>
+                            string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                            [1]=>
+                            string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                            [2]=>
+                            string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                          }
+                          ["id":protected]=>
+                          NULL
+                          ["defaultConfig":protected]=>
+                          array(0) {
+                          }
+                          ["userConfig":protected]=>
+                          array(8) {
+                            ["SERVER_HOST"]=>
+                            string(24) "https://api.kingdee.com/"
+                            ["client_secret"]=>
+                            string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                            ["client_id"]=>
+                            string(6) "205798"
+                            ["dbld"]=>
+                            string(12) "792129189262"
+                            ["username"]=>
+                            string(10) "bulutbazar"
+                            ["password"]=>
+                            string(9) "bb2883535"
+                            ["tid"]=>
+                            string(0) ""
+                            ["secret"]=>
+                            string(0) ""
+                          }
+                          ["values":"Pimple\Container":private]=>
+                          array(10) {
+                            ["log"]=>
+                            object(Closure)#37 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["logger"]=>
+                            *RECURSION*
+                            ["request"]=>
+                            object(Closure)#39 (1) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                              }
+                            }
+                            ["http_client"]=>
+                            object(Closure)#41 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["access_token"]=>
+                            object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                              ["endpointToGetToken":protected]=>
+                              string(46) "https://api.kingdee.com/auth/user/access_token"
+                              ["requestMethod":protected]=>
+                              string(3) "GET"
+                              ["app":protected]=>
+                              *RECURSION*
+                              ["queryName":protected]=>
+                              NULL
+                              ["token":protected]=>
+                              NULL
+                              ["safeSeconds":protected]=>
+                              int(500)
+                              ["tokenKey":protected]=>
+                              string(12) "access_token"
+                              ["cachePrefix":protected]=>
+                              string(33) "otkurbiz.jdy.kernel.access_token."
+                              ["httpClient":protected]=>
+                              NULL
+                              ["middlewares":protected]=>
+                              array(0) {
+                              }
+                              ["handlerStack":protected]=>
+                              NULL
+                              ["cache":protected]=>
+                              NULL
+                            }
+                            ["auth_code"]=>
+                            object(Closure)#44 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["org_access_token"]=>
+                            object(Closure)#45 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["system"]=>
+                            object(Closure)#47 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["customer"]=>
+                            *RECURSION*
+                            ["config"]=>
+                            object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                              ["items":protected]=>
+                              array(10) {
+                                ["http"]=>
+                                array(2) {
+                                  ["timeout"]=>
+                                  float(30)
+                                  ["base_uri"]=>
+                                  string(24) "https://api.kingdee.com/"
+                                }
+                                ["SERVER_HOST"]=>
+                                string(24) "https://api.kingdee.com/"
+                                ["client_secret"]=>
+                                string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                                ["client_id"]=>
+                                string(6) "205798"
+                                ["dbld"]=>
+                                string(12) "792129189262"
+                                ["username"]=>
+                                string(10) "bulutbazar"
+                                ["password"]=>
+                                string(9) "bb2883535"
+                                ["tid"]=>
+                                string(0) ""
+                                ["secret"]=>
+                                string(0) ""
+                                ["log"]=>
+                                array(2) {
+                                  ["default"]=>
+                                  string(8) "errorlog"
+                                  ["channels"]=>
+                                  array(1) {
+                                    ["errorlog"]=>
+                                    array(2) {
+                                      ["driver"]=>
+                                      string(8) "errorlog"
+                                      ["level"]=>
+                                      string(5) "debug"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          ["factories":"Pimple\Container":private]=>
+                          object(SplObjectStorage)#50 (1) {
+                            ["storage":"SplObjectStorage":private]=>
+                            array(0) {
+                            }
+                          }
+                          ["protected":"Pimple\Container":private]=>
+                          object(SplObjectStorage)#51 (1) {
+                            ["storage":"SplObjectStorage":private]=>
+                            array(0) {
+                            }
+                          }
+                          ["frozen":"Pimple\Container":private]=>
+                          array(3) {
+                            ["access_token"]=>
+                            bool(true)
+                            ["customer"]=>
+                            bool(true)
+                            ["logger"]=>
+                            bool(true)
+                          }
+                          ["raw":"Pimple\Container":private]=>
+                          array(3) {
+                            ["access_token"]=>
+                            object(Closure)#43 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["customer"]=>
+                            object(Closure)#49 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                            ["logger"]=>
+                            object(Closure)#37 (2) {
+                              ["this"]=>
+                              object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                              }
+                              ["parameter"]=>
+                              array(1) {
+                                ["$app"]=>
+                                string(10) "<required>"
+                              }
+                            }
+                          }
+                          ["keys":"Pimple\Container":private]=>
+                          array(10) {
+                            ["log"]=>
+                            bool(true)
+                            ["logger"]=>
+                            bool(true)
+                            ["request"]=>
+                            bool(true)
+                            ["http_client"]=>
+                            bool(true)
+                            ["access_token"]=>
+                            bool(true)
+                            ["auth_code"]=>
+                            bool(true)
+                            ["org_access_token"]=>
+                            bool(true)
+                            ["system"]=>
+                            bool(true)
+                            ["customer"]=>
+                            bool(true)
+                            ["config"]=>
+                            bool(true)
+                          }
+                        }
+                        ["channels":protected]=>
+                        array(0) {
+                        }
+                        ["customCreators":protected]=>
+                        array(0) {
+                        }
+                        ["levels":protected]=>
+                        array(8) {
+                          ["debug"]=>
+                          int(100)
+                          ["info"]=>
+                          int(200)
+                          ["notice"]=>
+                          int(250)
+                          ["warning"]=>
+                          int(300)
+                          ["error"]=>
+                          int(400)
+                          ["critical"]=>
+                          int(500)
+                          ["alert"]=>
+                          int(550)
+                          ["emergency"]=>
+                          int(600)
+                        }
+                      }
+                      ["formatter"]=>
+                      object(GuzzleHttp\MessageFormatter)#58 (1) {
+                        ["template":"GuzzleHttp\MessageFormatter":private]=>
+                        string(55) ">>>>>>>>
+{request}
+<<<<<<<<
+{response}
+--------
+{error}"
+                      }
+                      ["logLevel"]=>
+                      string(4) "info"
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$handler"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["dbld"]=>
+                  object(Closure)#59 (2) {
+                    ["this"]=>
+                    *RECURSION*
+                    ["parameter"]=>
+                    array(1) {
+                      ["$handler"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                }
+                ["handlerStack":protected]=>
+                *RECURSION*
+              }
+            }
+          }
+          ["parameter"]=>
+          array(1) {
+            ["$handler"]=>
+            string(10) "<required>"
+          }
+        }
+        [1]=>
+        string(5) "retry"
+      }
+      [5]=>
+      array(2) {
+        [0]=>
+        object(Closure)#57 (2) {
+          ["this"]=>
+          object(OtkurBiz\jdy\JdyScm\Customer\Customer)#52 (6) {
+            ["app":protected]=>
+            object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+              ["providers":protected]=>
+              array(3) {
+                [0]=>
+                string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                [1]=>
+                string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                [2]=>
+                string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+              }
+              ["id":protected]=>
+              NULL
+              ["defaultConfig":protected]=>
+              array(0) {
+              }
+              ["userConfig":protected]=>
+              array(8) {
+                ["SERVER_HOST"]=>
+                string(24) "https://api.kingdee.com/"
+                ["client_secret"]=>
+                string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                ["client_id"]=>
+                string(6) "205798"
+                ["dbld"]=>
+                string(12) "792129189262"
+                ["username"]=>
+                string(10) "bulutbazar"
+                ["password"]=>
+                string(9) "bb2883535"
+                ["tid"]=>
+                string(0) ""
+                ["secret"]=>
+                string(0) ""
+              }
+              ["values":"Pimple\Container":private]=>
+              array(10) {
+                ["log"]=>
+                object(Closure)#37 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["logger"]=>
+                object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                  ["app":protected]=>
+                  *RECURSION*
+                  ["channels":protected]=>
+                  array(0) {
+                  }
+                  ["customCreators":protected]=>
+                  array(0) {
+                  }
+                  ["levels":protected]=>
+                  array(8) {
+                    ["debug"]=>
+                    int(100)
+                    ["info"]=>
+                    int(200)
+                    ["notice"]=>
+                    int(250)
+                    ["warning"]=>
+                    int(300)
+                    ["error"]=>
+                    int(400)
+                    ["critical"]=>
+                    int(500)
+                    ["alert"]=>
+                    int(550)
+                    ["emergency"]=>
+                    int(600)
+                  }
+                }
+                ["request"]=>
+                object(Closure)#39 (1) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                  }
+                }
+                ["http_client"]=>
+                object(Closure)#41 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["access_token"]=>
+                object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                  ["endpointToGetToken":protected]=>
+                  string(46) "https://api.kingdee.com/auth/user/access_token"
+                  ["requestMethod":protected]=>
+                  string(3) "GET"
+                  ["app":protected]=>
+                  *RECURSION*
+                  ["queryName":protected]=>
+                  NULL
+                  ["token":protected]=>
+                  NULL
+                  ["safeSeconds":protected]=>
+                  int(500)
+                  ["tokenKey":protected]=>
+                  string(12) "access_token"
+                  ["cachePrefix":protected]=>
+                  string(33) "otkurbiz.jdy.kernel.access_token."
+                  ["httpClient":protected]=>
+                  NULL
+                  ["middlewares":protected]=>
+                  array(0) {
+                  }
+                  ["handlerStack":protected]=>
+                  NULL
+                  ["cache":protected]=>
+                  NULL
+                }
+                ["auth_code"]=>
+                object(Closure)#44 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["org_access_token"]=>
+                object(Closure)#45 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["system"]=>
+                object(Closure)#47 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["customer"]=>
+                *RECURSION*
+                ["config"]=>
+                object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                  ["items":protected]=>
+                  array(10) {
+                    ["http"]=>
+                    array(2) {
+                      ["timeout"]=>
+                      float(30)
+                      ["base_uri"]=>
+                      string(24) "https://api.kingdee.com/"
+                    }
+                    ["SERVER_HOST"]=>
+                    string(24) "https://api.kingdee.com/"
+                    ["client_secret"]=>
+                    string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                    ["client_id"]=>
+                    string(6) "205798"
+                    ["dbld"]=>
+                    string(12) "792129189262"
+                    ["username"]=>
+                    string(10) "bulutbazar"
+                    ["password"]=>
+                    string(9) "bb2883535"
+                    ["tid"]=>
+                    string(0) ""
+                    ["secret"]=>
+                    string(0) ""
+                    ["log"]=>
+                    array(2) {
+                      ["default"]=>
+                      string(8) "errorlog"
+                      ["channels"]=>
+                      array(1) {
+                        ["errorlog"]=>
+                        array(2) {
+                          ["driver"]=>
+                          string(8) "errorlog"
+                          ["level"]=>
+                          string(5) "debug"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              ["factories":"Pimple\Container":private]=>
+              object(SplObjectStorage)#50 (1) {
+                ["storage":"SplObjectStorage":private]=>
+                array(0) {
+                }
+              }
+              ["protected":"Pimple\Container":private]=>
+              object(SplObjectStorage)#51 (1) {
+                ["storage":"SplObjectStorage":private]=>
+                array(0) {
+                }
+              }
+              ["frozen":"Pimple\Container":private]=>
+              array(3) {
+                ["access_token"]=>
+                bool(true)
+                ["customer"]=>
+                bool(true)
+                ["logger"]=>
+                bool(true)
+              }
+              ["raw":"Pimple\Container":private]=>
+              array(3) {
+                ["access_token"]=>
+                object(Closure)#43 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["customer"]=>
+                object(Closure)#49 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["logger"]=>
+                object(Closure)#37 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+              }
+              ["keys":"Pimple\Container":private]=>
+              array(10) {
+                ["log"]=>
+                bool(true)
+                ["logger"]=>
+                bool(true)
+                ["request"]=>
+                bool(true)
+                ["http_client"]=>
+                bool(true)
+                ["access_token"]=>
+                bool(true)
+                ["auth_code"]=>
+                bool(true)
+                ["org_access_token"]=>
+                bool(true)
+                ["system"]=>
+                bool(true)
+                ["customer"]=>
+                bool(true)
+                ["config"]=>
+                bool(true)
+              }
+            }
+            ["accessToken":protected]=>
+            object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+              ["endpointToGetToken":protected]=>
+              string(46) "https://api.kingdee.com/auth/user/access_token"
+              ["requestMethod":protected]=>
+              string(3) "GET"
+              ["app":protected]=>
+              object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                ["providers":protected]=>
+                array(3) {
+                  [0]=>
+                  string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                  [1]=>
+                  string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                  [2]=>
+                  string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                }
+                ["id":protected]=>
+                NULL
+                ["defaultConfig":protected]=>
+                array(0) {
+                }
+                ["userConfig":protected]=>
+                array(8) {
+                  ["SERVER_HOST"]=>
+                  string(24) "https://api.kingdee.com/"
+                  ["client_secret"]=>
+                  string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                  ["client_id"]=>
+                  string(6) "205798"
+                  ["dbld"]=>
+                  string(12) "792129189262"
+                  ["username"]=>
+                  string(10) "bulutbazar"
+                  ["password"]=>
+                  string(9) "bb2883535"
+                  ["tid"]=>
+                  string(0) ""
+                  ["secret"]=>
+                  string(0) ""
+                }
+                ["values":"Pimple\Container":private]=>
+                array(10) {
+                  ["log"]=>
+                  object(Closure)#37 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["logger"]=>
+                  object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                    ["app":protected]=>
+                    *RECURSION*
+                    ["channels":protected]=>
+                    array(0) {
+                    }
+                    ["customCreators":protected]=>
+                    array(0) {
+                    }
+                    ["levels":protected]=>
+                    array(8) {
+                      ["debug"]=>
+                      int(100)
+                      ["info"]=>
+                      int(200)
+                      ["notice"]=>
+                      int(250)
+                      ["warning"]=>
+                      int(300)
+                      ["error"]=>
+                      int(400)
+                      ["critical"]=>
+                      int(500)
+                      ["alert"]=>
+                      int(550)
+                      ["emergency"]=>
+                      int(600)
+                    }
+                  }
+                  ["request"]=>
+                  object(Closure)#39 (1) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                    }
+                  }
+                  ["http_client"]=>
+                  object(Closure)#41 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["access_token"]=>
+                  *RECURSION*
+                  ["auth_code"]=>
+                  object(Closure)#44 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["org_access_token"]=>
+                  object(Closure)#45 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["system"]=>
+                  object(Closure)#47 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["customer"]=>
+                  *RECURSION*
+                  ["config"]=>
+                  object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                    ["items":protected]=>
+                    array(10) {
+                      ["http"]=>
+                      array(2) {
+                        ["timeout"]=>
+                        float(30)
+                        ["base_uri"]=>
+                        string(24) "https://api.kingdee.com/"
+                      }
+                      ["SERVER_HOST"]=>
+                      string(24) "https://api.kingdee.com/"
+                      ["client_secret"]=>
+                      string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                      ["client_id"]=>
+                      string(6) "205798"
+                      ["dbld"]=>
+                      string(12) "792129189262"
+                      ["username"]=>
+                      string(10) "bulutbazar"
+                      ["password"]=>
+                      string(9) "bb2883535"
+                      ["tid"]=>
+                      string(0) ""
+                      ["secret"]=>
+                      string(0) ""
+                      ["log"]=>
+                      array(2) {
+                        ["default"]=>
+                        string(8) "errorlog"
+                        ["channels"]=>
+                        array(1) {
+                          ["errorlog"]=>
+                          array(2) {
+                            ["driver"]=>
+                            string(8) "errorlog"
+                            ["level"]=>
+                            string(5) "debug"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                ["factories":"Pimple\Container":private]=>
+                object(SplObjectStorage)#50 (1) {
+                  ["storage":"SplObjectStorage":private]=>
+                  array(0) {
+                  }
+                }
+                ["protected":"Pimple\Container":private]=>
+                object(SplObjectStorage)#51 (1) {
+                  ["storage":"SplObjectStorage":private]=>
+                  array(0) {
+                  }
+                }
+                ["frozen":"Pimple\Container":private]=>
+                array(3) {
+                  ["access_token"]=>
+                  bool(true)
+                  ["customer"]=>
+                  bool(true)
+                  ["logger"]=>
+                  bool(true)
+                }
+                ["raw":"Pimple\Container":private]=>
+                array(3) {
+                  ["access_token"]=>
+                  object(Closure)#43 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["customer"]=>
+                  object(Closure)#49 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["logger"]=>
+                  object(Closure)#37 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                }
+                ["keys":"Pimple\Container":private]=>
+                array(10) {
+                  ["log"]=>
+                  bool(true)
+                  ["logger"]=>
+                  bool(true)
+                  ["request"]=>
+                  bool(true)
+                  ["http_client"]=>
+                  bool(true)
+                  ["access_token"]=>
+                  bool(true)
+                  ["auth_code"]=>
+                  bool(true)
+                  ["org_access_token"]=>
+                  bool(true)
+                  ["system"]=>
+                  bool(true)
+                  ["customer"]=>
+                  bool(true)
+                  ["config"]=>
+                  bool(true)
+                }
+              }
+              ["queryName":protected]=>
+              NULL
+              ["token":protected]=>
+              NULL
+              ["safeSeconds":protected]=>
+              int(500)
+              ["tokenKey":protected]=>
+              string(12) "access_token"
+              ["cachePrefix":protected]=>
+              string(33) "otkurbiz.jdy.kernel.access_token."
+              ["httpClient":protected]=>
+              NULL
+              ["middlewares":protected]=>
+              array(0) {
+              }
+              ["handlerStack":protected]=>
+              NULL
+              ["cache":protected]=>
+              NULL
+            }
+            ["baseUri":protected]=>
+            NULL
+            ["httpClient":protected]=>
+            NULL
+            ["middlewares":protected]=>
+            array(4) {
+              ["retry"]=>
+              object(Closure)#56 (2) {
+                ["static"]=>
+                array(2) {
+                  ["decider"]=>
+                  object(Closure)#54 (2) {
+                    ["this"]=>
+                    *RECURSION*
+                    ["parameter"]=>
+                    array(3) {
+                      ["$retries"]=>
+                      string(10) "<required>"
+                      ["$request"]=>
+                      string(10) "<required>"
+                      ["$response"]=>
+                      string(10) "<optional>"
+                    }
+                  }
+                  ["delay"]=>
+                  object(Closure)#55 (1) {
+                    ["this"]=>
+                    *RECURSION*
+                  }
+                }
+                ["parameter"]=>
+                array(1) {
+                  ["$handler"]=>
+                  string(10) "<required>"
+                }
+              }
+              ["access_token"]=>
+              *RECURSION*
+              ["log"]=>
+              object(Closure)#34 (2) {
+                ["static"]=>
+                array(3) {
+                  ["logger"]=>
+                  object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                    ["app":protected]=>
+                    object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                      ["providers":protected]=>
+                      array(3) {
+                        [0]=>
+                        string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                        [1]=>
+                        string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                        [2]=>
+                        string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                      }
+                      ["id":protected]=>
+                      NULL
+                      ["defaultConfig":protected]=>
+                      array(0) {
+                      }
+                      ["userConfig":protected]=>
+                      array(8) {
+                        ["SERVER_HOST"]=>
+                        string(24) "https://api.kingdee.com/"
+                        ["client_secret"]=>
+                        string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                        ["client_id"]=>
+                        string(6) "205798"
+                        ["dbld"]=>
+                        string(12) "792129189262"
+                        ["username"]=>
+                        string(10) "bulutbazar"
+                        ["password"]=>
+                        string(9) "bb2883535"
+                        ["tid"]=>
+                        string(0) ""
+                        ["secret"]=>
+                        string(0) ""
+                      }
+                      ["values":"Pimple\Container":private]=>
+                      array(10) {
+                        ["log"]=>
+                        object(Closure)#37 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["logger"]=>
+                        *RECURSION*
+                        ["request"]=>
+                        object(Closure)#39 (1) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                          }
+                        }
+                        ["http_client"]=>
+                        object(Closure)#41 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["access_token"]=>
+                        object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                          ["endpointToGetToken":protected]=>
+                          string(46) "https://api.kingdee.com/auth/user/access_token"
+                          ["requestMethod":protected]=>
+                          string(3) "GET"
+                          ["app":protected]=>
+                          *RECURSION*
+                          ["queryName":protected]=>
+                          NULL
+                          ["token":protected]=>
+                          NULL
+                          ["safeSeconds":protected]=>
+                          int(500)
+                          ["tokenKey":protected]=>
+                          string(12) "access_token"
+                          ["cachePrefix":protected]=>
+                          string(33) "otkurbiz.jdy.kernel.access_token."
+                          ["httpClient":protected]=>
+                          NULL
+                          ["middlewares":protected]=>
+                          array(0) {
+                          }
+                          ["handlerStack":protected]=>
+                          NULL
+                          ["cache":protected]=>
+                          NULL
+                        }
+                        ["auth_code"]=>
+                        object(Closure)#44 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["org_access_token"]=>
+                        object(Closure)#45 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["system"]=>
+                        object(Closure)#47 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["customer"]=>
+                        *RECURSION*
+                        ["config"]=>
+                        object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                          ["items":protected]=>
+                          array(10) {
+                            ["http"]=>
+                            array(2) {
+                              ["timeout"]=>
+                              float(30)
+                              ["base_uri"]=>
+                              string(24) "https://api.kingdee.com/"
+                            }
+                            ["SERVER_HOST"]=>
+                            string(24) "https://api.kingdee.com/"
+                            ["client_secret"]=>
+                            string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                            ["client_id"]=>
+                            string(6) "205798"
+                            ["dbld"]=>
+                            string(12) "792129189262"
+                            ["username"]=>
+                            string(10) "bulutbazar"
+                            ["password"]=>
+                            string(9) "bb2883535"
+                            ["tid"]=>
+                            string(0) ""
+                            ["secret"]=>
+                            string(0) ""
+                            ["log"]=>
+                            array(2) {
+                              ["default"]=>
+                              string(8) "errorlog"
+                              ["channels"]=>
+                              array(1) {
+                                ["errorlog"]=>
+                                array(2) {
+                                  ["driver"]=>
+                                  string(8) "errorlog"
+                                  ["level"]=>
+                                  string(5) "debug"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      ["factories":"Pimple\Container":private]=>
+                      object(SplObjectStorage)#50 (1) {
+                        ["storage":"SplObjectStorage":private]=>
+                        array(0) {
+                        }
+                      }
+                      ["protected":"Pimple\Container":private]=>
+                      object(SplObjectStorage)#51 (1) {
+                        ["storage":"SplObjectStorage":private]=>
+                        array(0) {
+                        }
+                      }
+                      ["frozen":"Pimple\Container":private]=>
+                      array(3) {
+                        ["access_token"]=>
+                        bool(true)
+                        ["customer"]=>
+                        bool(true)
+                        ["logger"]=>
+                        bool(true)
+                      }
+                      ["raw":"Pimple\Container":private]=>
+                      array(3) {
+                        ["access_token"]=>
+                        object(Closure)#43 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["customer"]=>
+                        object(Closure)#49 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["logger"]=>
+                        object(Closure)#37 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                      }
+                      ["keys":"Pimple\Container":private]=>
+                      array(10) {
+                        ["log"]=>
+                        bool(true)
+                        ["logger"]=>
+                        bool(true)
+                        ["request"]=>
+                        bool(true)
+                        ["http_client"]=>
+                        bool(true)
+                        ["access_token"]=>
+                        bool(true)
+                        ["auth_code"]=>
+                        bool(true)
+                        ["org_access_token"]=>
+                        bool(true)
+                        ["system"]=>
+                        bool(true)
+                        ["customer"]=>
+                        bool(true)
+                        ["config"]=>
+                        bool(true)
+                      }
+                    }
+                    ["channels":protected]=>
+                    array(0) {
+                    }
+                    ["customCreators":protected]=>
+                    array(0) {
+                    }
+                    ["levels":protected]=>
+                    array(8) {
+                      ["debug"]=>
+                      int(100)
+                      ["info"]=>
+                      int(200)
+                      ["notice"]=>
+                      int(250)
+                      ["warning"]=>
+                      int(300)
+                      ["error"]=>
+                      int(400)
+                      ["critical"]=>
+                      int(500)
+                      ["alert"]=>
+                      int(550)
+                      ["emergency"]=>
+                      int(600)
+                    }
+                  }
+                  ["formatter"]=>
+                  object(GuzzleHttp\MessageFormatter)#58 (1) {
+                    ["template":"GuzzleHttp\MessageFormatter":private]=>
+                    string(55) ">>>>>>>>
+{request}
+<<<<<<<<
+{response}
+--------
+{error}"
+                  }
+                  ["logLevel"]=>
+                  string(4) "info"
+                }
+                ["parameter"]=>
+                array(1) {
+                  ["$handler"]=>
+                  string(10) "<required>"
+                }
+              }
+              ["dbld"]=>
+              object(Closure)#59 (2) {
+                ["this"]=>
+                *RECURSION*
+                ["parameter"]=>
+                array(1) {
+                  ["$handler"]=>
+                  string(10) "<required>"
+                }
+              }
+            }
+            ["handlerStack":protected]=>
+            *RECURSION*
+          }
+          ["parameter"]=>
+          array(1) {
+            ["$handler"]=>
+            string(10) "<required>"
+          }
+        }
+        [1]=>
+        string(12) "access_token"
+      }
+      [6]=>
+      array(2) {
+        [0]=>
+        object(Closure)#34 (2) {
+          ["static"]=>
+          array(3) {
+            ["logger"]=>
+            object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+              ["app":protected]=>
+              object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                ["providers":protected]=>
+                array(3) {
+                  [0]=>
+                  string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                  [1]=>
+                  string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                  [2]=>
+                  string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                }
+                ["id":protected]=>
+                NULL
+                ["defaultConfig":protected]=>
+                array(0) {
+                }
+                ["userConfig":protected]=>
+                array(8) {
+                  ["SERVER_HOST"]=>
+                  string(24) "https://api.kingdee.com/"
+                  ["client_secret"]=>
+                  string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                  ["client_id"]=>
+                  string(6) "205798"
+                  ["dbld"]=>
+                  string(12) "792129189262"
+                  ["username"]=>
+                  string(10) "bulutbazar"
+                  ["password"]=>
+                  string(9) "bb2883535"
+                  ["tid"]=>
+                  string(0) ""
+                  ["secret"]=>
+                  string(0) ""
+                }
+                ["values":"Pimple\Container":private]=>
+                array(10) {
+                  ["log"]=>
+                  object(Closure)#37 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["logger"]=>
+                  *RECURSION*
+                  ["request"]=>
+                  object(Closure)#39 (1) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                    }
+                  }
+                  ["http_client"]=>
+                  object(Closure)#41 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["access_token"]=>
+                  object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                    ["endpointToGetToken":protected]=>
+                    string(46) "https://api.kingdee.com/auth/user/access_token"
+                    ["requestMethod":protected]=>
+                    string(3) "GET"
+                    ["app":protected]=>
+                    *RECURSION*
+                    ["queryName":protected]=>
+                    NULL
+                    ["token":protected]=>
+                    NULL
+                    ["safeSeconds":protected]=>
+                    int(500)
+                    ["tokenKey":protected]=>
+                    string(12) "access_token"
+                    ["cachePrefix":protected]=>
+                    string(33) "otkurbiz.jdy.kernel.access_token."
+                    ["httpClient":protected]=>
+                    NULL
+                    ["middlewares":protected]=>
+                    array(0) {
+                    }
+                    ["handlerStack":protected]=>
+                    NULL
+                    ["cache":protected]=>
+                    NULL
+                  }
+                  ["auth_code"]=>
+                  object(Closure)#44 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["org_access_token"]=>
+                  object(Closure)#45 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["system"]=>
+                  object(Closure)#47 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["customer"]=>
+                  object(OtkurBiz\jdy\JdyScm\Customer\Customer)#52 (6) {
+                    ["app":protected]=>
+                    *RECURSION*
+                    ["accessToken":protected]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                      ["endpointToGetToken":protected]=>
+                      string(46) "https://api.kingdee.com/auth/user/access_token"
+                      ["requestMethod":protected]=>
+                      string(3) "GET"
+                      ["app":protected]=>
+                      *RECURSION*
+                      ["queryName":protected]=>
+                      NULL
+                      ["token":protected]=>
+                      NULL
+                      ["safeSeconds":protected]=>
+                      int(500)
+                      ["tokenKey":protected]=>
+                      string(12) "access_token"
+                      ["cachePrefix":protected]=>
+                      string(33) "otkurbiz.jdy.kernel.access_token."
+                      ["httpClient":protected]=>
+                      NULL
+                      ["middlewares":protected]=>
+                      array(0) {
+                      }
+                      ["handlerStack":protected]=>
+                      NULL
+                      ["cache":protected]=>
+                      NULL
+                    }
+                    ["baseUri":protected]=>
+                    NULL
+                    ["httpClient":protected]=>
+                    NULL
+                    ["middlewares":protected]=>
+                    array(4) {
+                      ["retry"]=>
+                      object(Closure)#56 (2) {
+                        ["static"]=>
+                        array(2) {
+                          ["decider"]=>
+                          object(Closure)#54 (2) {
+                            ["this"]=>
+                            *RECURSION*
+                            ["parameter"]=>
+                            array(3) {
+                              ["$retries"]=>
+                              string(10) "<required>"
+                              ["$request"]=>
+                              string(10) "<required>"
+                              ["$response"]=>
+                              string(10) "<optional>"
+                            }
+                          }
+                          ["delay"]=>
+                          object(Closure)#55 (1) {
+                            ["this"]=>
+                            *RECURSION*
+                          }
+                        }
+                        ["parameter"]=>
+                        array(1) {
+                          ["$handler"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["access_token"]=>
+                      object(Closure)#57 (2) {
+                        ["this"]=>
+                        *RECURSION*
+                        ["parameter"]=>
+                        array(1) {
+                          ["$handler"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["log"]=>
+                      *RECURSION*
+                      ["dbld"]=>
+                      object(Closure)#59 (2) {
+                        ["this"]=>
+                        *RECURSION*
+                        ["parameter"]=>
+                        array(1) {
+                          ["$handler"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                    }
+                    ["handlerStack":protected]=>
+                    *RECURSION*
+                  }
+                  ["config"]=>
+                  object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                    ["items":protected]=>
+                    array(10) {
+                      ["http"]=>
+                      array(2) {
+                        ["timeout"]=>
+                        float(30)
+                        ["base_uri"]=>
+                        string(24) "https://api.kingdee.com/"
+                      }
+                      ["SERVER_HOST"]=>
+                      string(24) "https://api.kingdee.com/"
+                      ["client_secret"]=>
+                      string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                      ["client_id"]=>
+                      string(6) "205798"
+                      ["dbld"]=>
+                      string(12) "792129189262"
+                      ["username"]=>
+                      string(10) "bulutbazar"
+                      ["password"]=>
+                      string(9) "bb2883535"
+                      ["tid"]=>
+                      string(0) ""
+                      ["secret"]=>
+                      string(0) ""
+                      ["log"]=>
+                      array(2) {
+                        ["default"]=>
+                        string(8) "errorlog"
+                        ["channels"]=>
+                        array(1) {
+                          ["errorlog"]=>
+                          array(2) {
+                            ["driver"]=>
+                            string(8) "errorlog"
+                            ["level"]=>
+                            string(5) "debug"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                ["factories":"Pimple\Container":private]=>
+                object(SplObjectStorage)#50 (1) {
+                  ["storage":"SplObjectStorage":private]=>
+                  array(0) {
+                  }
+                }
+                ["protected":"Pimple\Container":private]=>
+                object(SplObjectStorage)#51 (1) {
+                  ["storage":"SplObjectStorage":private]=>
+                  array(0) {
+                  }
+                }
+                ["frozen":"Pimple\Container":private]=>
+                array(3) {
+                  ["access_token"]=>
+                  bool(true)
+                  ["customer"]=>
+                  bool(true)
+                  ["logger"]=>
+                  bool(true)
+                }
+                ["raw":"Pimple\Container":private]=>
+                array(3) {
+                  ["access_token"]=>
+                  object(Closure)#43 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["customer"]=>
+                  object(Closure)#49 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["logger"]=>
+                  object(Closure)#37 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                }
+                ["keys":"Pimple\Container":private]=>
+                array(10) {
+                  ["log"]=>
+                  bool(true)
+                  ["logger"]=>
+                  bool(true)
+                  ["request"]=>
+                  bool(true)
+                  ["http_client"]=>
+                  bool(true)
+                  ["access_token"]=>
+                  bool(true)
+                  ["auth_code"]=>
+                  bool(true)
+                  ["org_access_token"]=>
+                  bool(true)
+                  ["system"]=>
+                  bool(true)
+                  ["customer"]=>
+                  bool(true)
+                  ["config"]=>
+                  bool(true)
+                }
+              }
+              ["channels":protected]=>
+              array(0) {
+              }
+              ["customCreators":protected]=>
+              array(0) {
+              }
+              ["levels":protected]=>
+              array(8) {
+                ["debug"]=>
+                int(100)
+                ["info"]=>
+                int(200)
+                ["notice"]=>
+                int(250)
+                ["warning"]=>
+                int(300)
+                ["error"]=>
+                int(400)
+                ["critical"]=>
+                int(500)
+                ["alert"]=>
+                int(550)
+                ["emergency"]=>
+                int(600)
+              }
+            }
+            ["formatter"]=>
+            object(GuzzleHttp\MessageFormatter)#58 (1) {
+              ["template":"GuzzleHttp\MessageFormatter":private]=>
+              string(55) ">>>>>>>>
+{request}
+<<<<<<<<
+{response}
+--------
+{error}"
+            }
+            ["logLevel"]=>
+            string(4) "info"
+          }
+          ["parameter"]=>
+          array(1) {
+            ["$handler"]=>
+            string(10) "<required>"
+          }
+        }
+        [1]=>
+        string(3) "log"
+      }
+      [7]=>
+      array(2) {
+        [0]=>
+        object(Closure)#59 (2) {
+          ["this"]=>
+          object(OtkurBiz\jdy\JdyScm\Customer\Customer)#52 (6) {
+            ["app":protected]=>
+            object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+              ["providers":protected]=>
+              array(3) {
+                [0]=>
+                string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                [1]=>
+                string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                [2]=>
+                string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+              }
+              ["id":protected]=>
+              NULL
+              ["defaultConfig":protected]=>
+              array(0) {
+              }
+              ["userConfig":protected]=>
+              array(8) {
+                ["SERVER_HOST"]=>
+                string(24) "https://api.kingdee.com/"
+                ["client_secret"]=>
+                string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                ["client_id"]=>
+                string(6) "205798"
+                ["dbld"]=>
+                string(12) "792129189262"
+                ["username"]=>
+                string(10) "bulutbazar"
+                ["password"]=>
+                string(9) "bb2883535"
+                ["tid"]=>
+                string(0) ""
+                ["secret"]=>
+                string(0) ""
+              }
+              ["values":"Pimple\Container":private]=>
+              array(10) {
+                ["log"]=>
+                object(Closure)#37 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["logger"]=>
+                object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                  ["app":protected]=>
+                  *RECURSION*
+                  ["channels":protected]=>
+                  array(0) {
+                  }
+                  ["customCreators":protected]=>
+                  array(0) {
+                  }
+                  ["levels":protected]=>
+                  array(8) {
+                    ["debug"]=>
+                    int(100)
+                    ["info"]=>
+                    int(200)
+                    ["notice"]=>
+                    int(250)
+                    ["warning"]=>
+                    int(300)
+                    ["error"]=>
+                    int(400)
+                    ["critical"]=>
+                    int(500)
+                    ["alert"]=>
+                    int(550)
+                    ["emergency"]=>
+                    int(600)
+                  }
+                }
+                ["request"]=>
+                object(Closure)#39 (1) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                  }
+                }
+                ["http_client"]=>
+                object(Closure)#41 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["access_token"]=>
+                object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                  ["endpointToGetToken":protected]=>
+                  string(46) "https://api.kingdee.com/auth/user/access_token"
+                  ["requestMethod":protected]=>
+                  string(3) "GET"
+                  ["app":protected]=>
+                  *RECURSION*
+                  ["queryName":protected]=>
+                  NULL
+                  ["token":protected]=>
+                  NULL
+                  ["safeSeconds":protected]=>
+                  int(500)
+                  ["tokenKey":protected]=>
+                  string(12) "access_token"
+                  ["cachePrefix":protected]=>
+                  string(33) "otkurbiz.jdy.kernel.access_token."
+                  ["httpClient":protected]=>
+                  NULL
+                  ["middlewares":protected]=>
+                  array(0) {
+                  }
+                  ["handlerStack":protected]=>
+                  NULL
+                  ["cache":protected]=>
+                  NULL
+                }
+                ["auth_code"]=>
+                object(Closure)#44 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["org_access_token"]=>
+                object(Closure)#45 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["system"]=>
+                object(Closure)#47 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["customer"]=>
+                *RECURSION*
+                ["config"]=>
+                object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                  ["items":protected]=>
+                  array(10) {
+                    ["http"]=>
+                    array(2) {
+                      ["timeout"]=>
+                      float(30)
+                      ["base_uri"]=>
+                      string(24) "https://api.kingdee.com/"
+                    }
+                    ["SERVER_HOST"]=>
+                    string(24) "https://api.kingdee.com/"
+                    ["client_secret"]=>
+                    string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                    ["client_id"]=>
+                    string(6) "205798"
+                    ["dbld"]=>
+                    string(12) "792129189262"
+                    ["username"]=>
+                    string(10) "bulutbazar"
+                    ["password"]=>
+                    string(9) "bb2883535"
+                    ["tid"]=>
+                    string(0) ""
+                    ["secret"]=>
+                    string(0) ""
+                    ["log"]=>
+                    array(2) {
+                      ["default"]=>
+                      string(8) "errorlog"
+                      ["channels"]=>
+                      array(1) {
+                        ["errorlog"]=>
+                        array(2) {
+                          ["driver"]=>
+                          string(8) "errorlog"
+                          ["level"]=>
+                          string(5) "debug"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              ["factories":"Pimple\Container":private]=>
+              object(SplObjectStorage)#50 (1) {
+                ["storage":"SplObjectStorage":private]=>
+                array(0) {
+                }
+              }
+              ["protected":"Pimple\Container":private]=>
+              object(SplObjectStorage)#51 (1) {
+                ["storage":"SplObjectStorage":private]=>
+                array(0) {
+                }
+              }
+              ["frozen":"Pimple\Container":private]=>
+              array(3) {
+                ["access_token"]=>
+                bool(true)
+                ["customer"]=>
+                bool(true)
+                ["logger"]=>
+                bool(true)
+              }
+              ["raw":"Pimple\Container":private]=>
+              array(3) {
+                ["access_token"]=>
+                object(Closure)#43 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["customer"]=>
+                object(Closure)#49 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+                ["logger"]=>
+                object(Closure)#37 (2) {
+                  ["this"]=>
+                  object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                  }
+                  ["parameter"]=>
+                  array(1) {
+                    ["$app"]=>
+                    string(10) "<required>"
+                  }
+                }
+              }
+              ["keys":"Pimple\Container":private]=>
+              array(10) {
+                ["log"]=>
+                bool(true)
+                ["logger"]=>
+                bool(true)
+                ["request"]=>
+                bool(true)
+                ["http_client"]=>
+                bool(true)
+                ["access_token"]=>
+                bool(true)
+                ["auth_code"]=>
+                bool(true)
+                ["org_access_token"]=>
+                bool(true)
+                ["system"]=>
+                bool(true)
+                ["customer"]=>
+                bool(true)
+                ["config"]=>
+                bool(true)
+              }
+            }
+            ["accessToken":protected]=>
+            object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+              ["endpointToGetToken":protected]=>
+              string(46) "https://api.kingdee.com/auth/user/access_token"
+              ["requestMethod":protected]=>
+              string(3) "GET"
+              ["app":protected]=>
+              object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                ["providers":protected]=>
+                array(3) {
+                  [0]=>
+                  string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                  [1]=>
+                  string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                  [2]=>
+                  string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                }
+                ["id":protected]=>
+                NULL
+                ["defaultConfig":protected]=>
+                array(0) {
+                }
+                ["userConfig":protected]=>
+                array(8) {
+                  ["SERVER_HOST"]=>
+                  string(24) "https://api.kingdee.com/"
+                  ["client_secret"]=>
+                  string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                  ["client_id"]=>
+                  string(6) "205798"
+                  ["dbld"]=>
+                  string(12) "792129189262"
+                  ["username"]=>
+                  string(10) "bulutbazar"
+                  ["password"]=>
+                  string(9) "bb2883535"
+                  ["tid"]=>
+                  string(0) ""
+                  ["secret"]=>
+                  string(0) ""
+                }
+                ["values":"Pimple\Container":private]=>
+                array(10) {
+                  ["log"]=>
+                  object(Closure)#37 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["logger"]=>
+                  object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                    ["app":protected]=>
+                    *RECURSION*
+                    ["channels":protected]=>
+                    array(0) {
+                    }
+                    ["customCreators":protected]=>
+                    array(0) {
+                    }
+                    ["levels":protected]=>
+                    array(8) {
+                      ["debug"]=>
+                      int(100)
+                      ["info"]=>
+                      int(200)
+                      ["notice"]=>
+                      int(250)
+                      ["warning"]=>
+                      int(300)
+                      ["error"]=>
+                      int(400)
+                      ["critical"]=>
+                      int(500)
+                      ["alert"]=>
+                      int(550)
+                      ["emergency"]=>
+                      int(600)
+                    }
+                  }
+                  ["request"]=>
+                  object(Closure)#39 (1) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                    }
+                  }
+                  ["http_client"]=>
+                  object(Closure)#41 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["access_token"]=>
+                  *RECURSION*
+                  ["auth_code"]=>
+                  object(Closure)#44 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["org_access_token"]=>
+                  object(Closure)#45 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["system"]=>
+                  object(Closure)#47 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["customer"]=>
+                  *RECURSION*
+                  ["config"]=>
+                  object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                    ["items":protected]=>
+                    array(10) {
+                      ["http"]=>
+                      array(2) {
+                        ["timeout"]=>
+                        float(30)
+                        ["base_uri"]=>
+                        string(24) "https://api.kingdee.com/"
+                      }
+                      ["SERVER_HOST"]=>
+                      string(24) "https://api.kingdee.com/"
+                      ["client_secret"]=>
+                      string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                      ["client_id"]=>
+                      string(6) "205798"
+                      ["dbld"]=>
+                      string(12) "792129189262"
+                      ["username"]=>
+                      string(10) "bulutbazar"
+                      ["password"]=>
+                      string(9) "bb2883535"
+                      ["tid"]=>
+                      string(0) ""
+                      ["secret"]=>
+                      string(0) ""
+                      ["log"]=>
+                      array(2) {
+                        ["default"]=>
+                        string(8) "errorlog"
+                        ["channels"]=>
+                        array(1) {
+                          ["errorlog"]=>
+                          array(2) {
+                            ["driver"]=>
+                            string(8) "errorlog"
+                            ["level"]=>
+                            string(5) "debug"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                ["factories":"Pimple\Container":private]=>
+                object(SplObjectStorage)#50 (1) {
+                  ["storage":"SplObjectStorage":private]=>
+                  array(0) {
+                  }
+                }
+                ["protected":"Pimple\Container":private]=>
+                object(SplObjectStorage)#51 (1) {
+                  ["storage":"SplObjectStorage":private]=>
+                  array(0) {
+                  }
+                }
+                ["frozen":"Pimple\Container":private]=>
+                array(3) {
+                  ["access_token"]=>
+                  bool(true)
+                  ["customer"]=>
+                  bool(true)
+                  ["logger"]=>
+                  bool(true)
+                }
+                ["raw":"Pimple\Container":private]=>
+                array(3) {
+                  ["access_token"]=>
+                  object(Closure)#43 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["customer"]=>
+                  object(Closure)#49 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["logger"]=>
+                  object(Closure)#37 (2) {
+                    ["this"]=>
+                    object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                    }
+                    ["parameter"]=>
+                    array(1) {
+                      ["$app"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                }
+                ["keys":"Pimple\Container":private]=>
+                array(10) {
+                  ["log"]=>
+                  bool(true)
+                  ["logger"]=>
+                  bool(true)
+                  ["request"]=>
+                  bool(true)
+                  ["http_client"]=>
+                  bool(true)
+                  ["access_token"]=>
+                  bool(true)
+                  ["auth_code"]=>
+                  bool(true)
+                  ["org_access_token"]=>
+                  bool(true)
+                  ["system"]=>
+                  bool(true)
+                  ["customer"]=>
+                  bool(true)
+                  ["config"]=>
+                  bool(true)
+                }
+              }
+              ["queryName":protected]=>
+              NULL
+              ["token":protected]=>
+              NULL
+              ["safeSeconds":protected]=>
+              int(500)
+              ["tokenKey":protected]=>
+              string(12) "access_token"
+              ["cachePrefix":protected]=>
+              string(33) "otkurbiz.jdy.kernel.access_token."
+              ["httpClient":protected]=>
+              NULL
+              ["middlewares":protected]=>
+              array(0) {
+              }
+              ["handlerStack":protected]=>
+              NULL
+              ["cache":protected]=>
+              NULL
+            }
+            ["baseUri":protected]=>
+            NULL
+            ["httpClient":protected]=>
+            NULL
+            ["middlewares":protected]=>
+            array(4) {
+              ["retry"]=>
+              object(Closure)#56 (2) {
+                ["static"]=>
+                array(2) {
+                  ["decider"]=>
+                  object(Closure)#54 (2) {
+                    ["this"]=>
+                    *RECURSION*
+                    ["parameter"]=>
+                    array(3) {
+                      ["$retries"]=>
+                      string(10) "<required>"
+                      ["$request"]=>
+                      string(10) "<required>"
+                      ["$response"]=>
+                      string(10) "<optional>"
+                    }
+                  }
+                  ["delay"]=>
+                  object(Closure)#55 (1) {
+                    ["this"]=>
+                    *RECURSION*
+                  }
+                }
+                ["parameter"]=>
+                array(1) {
+                  ["$handler"]=>
+                  string(10) "<required>"
+                }
+              }
+              ["access_token"]=>
+              object(Closure)#57 (2) {
+                ["this"]=>
+                *RECURSION*
+                ["parameter"]=>
+                array(1) {
+                  ["$handler"]=>
+                  string(10) "<required>"
+                }
+              }
+              ["log"]=>
+              object(Closure)#34 (2) {
+                ["static"]=>
+                array(3) {
+                  ["logger"]=>
+                  object(OtkurBiz\jdy\Kernel\Log\LogManager)#35 (4) {
+                    ["app":protected]=>
+                    object(OtkurBiz\jdy\JdyScm\Application)#33 (10) {
+                      ["providers":protected]=>
+                      array(3) {
+                        [0]=>
+                        string(42) "OtkurBiz\jdy\Auth\Auth\AuthServiceProvider"
+                        [1]=>
+                        string(42) "OtkurBiz\jdy\JdyScm\System\ServiceProvider"
+                        [2]=>
+                        string(52) "OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider"
+                      }
+                      ["id":protected]=>
+                      NULL
+                      ["defaultConfig":protected]=>
+                      array(0) {
+                      }
+                      ["userConfig":protected]=>
+                      array(8) {
+                        ["SERVER_HOST"]=>
+                        string(24) "https://api.kingdee.com/"
+                        ["client_secret"]=>
+                        string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                        ["client_id"]=>
+                        string(6) "205798"
+                        ["dbld"]=>
+                        string(12) "792129189262"
+                        ["username"]=>
+                        string(10) "bulutbazar"
+                        ["password"]=>
+                        string(9) "bb2883535"
+                        ["tid"]=>
+                        string(0) ""
+                        ["secret"]=>
+                        string(0) ""
+                      }
+                      ["values":"Pimple\Container":private]=>
+                      array(10) {
+                        ["log"]=>
+                        object(Closure)#37 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["logger"]=>
+                        *RECURSION*
+                        ["request"]=>
+                        object(Closure)#39 (1) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Kernel\Providers\RequestServiceProvider)#38 (0) {
+                          }
+                        }
+                        ["http_client"]=>
+                        object(Closure)#41 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Kernel\Providers\HttpClientServiceProvider)#40 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["access_token"]=>
+                        object(OtkurBiz\jdy\Auth\Auth\AccessToken)#53 (12) {
+                          ["endpointToGetToken":protected]=>
+                          string(46) "https://api.kingdee.com/auth/user/access_token"
+                          ["requestMethod":protected]=>
+                          string(3) "GET"
+                          ["app":protected]=>
+                          *RECURSION*
+                          ["queryName":protected]=>
+                          NULL
+                          ["token":protected]=>
+                          NULL
+                          ["safeSeconds":protected]=>
+                          int(500)
+                          ["tokenKey":protected]=>
+                          string(12) "access_token"
+                          ["cachePrefix":protected]=>
+                          string(33) "otkurbiz.jdy.kernel.access_token."
+                          ["httpClient":protected]=>
+                          NULL
+                          ["middlewares":protected]=>
+                          array(0) {
+                          }
+                          ["handlerStack":protected]=>
+                          NULL
+                          ["cache":protected]=>
+                          NULL
+                        }
+                        ["auth_code"]=>
+                        object(Closure)#44 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["org_access_token"]=>
+                        object(Closure)#45 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["system"]=>
+                        object(Closure)#47 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\JdyScm\System\ServiceProvider)#46 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["customer"]=>
+                        *RECURSION*
+                        ["config"]=>
+                        object(OtkurBiz\jdy\Kernel\Config)#60 (1) {
+                          ["items":protected]=>
+                          array(10) {
+                            ["http"]=>
+                            array(2) {
+                              ["timeout"]=>
+                              float(30)
+                              ["base_uri"]=>
+                              string(24) "https://api.kingdee.com/"
+                            }
+                            ["SERVER_HOST"]=>
+                            string(24) "https://api.kingdee.com/"
+                            ["client_secret"]=>
+                            string(32) "7c1f6d5c654988ea9d706918b73351d9"
+                            ["client_id"]=>
+                            string(6) "205798"
+                            ["dbld"]=>
+                            string(12) "792129189262"
+                            ["username"]=>
+                            string(10) "bulutbazar"
+                            ["password"]=>
+                            string(9) "bb2883535"
+                            ["tid"]=>
+                            string(0) ""
+                            ["secret"]=>
+                            string(0) ""
+                            ["log"]=>
+                            array(2) {
+                              ["default"]=>
+                              string(8) "errorlog"
+                              ["channels"]=>
+                              array(1) {
+                                ["errorlog"]=>
+                                array(2) {
+                                  ["driver"]=>
+                                  string(8) "errorlog"
+                                  ["level"]=>
+                                  string(5) "debug"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      ["factories":"Pimple\Container":private]=>
+                      object(SplObjectStorage)#50 (1) {
+                        ["storage":"SplObjectStorage":private]=>
+                        array(0) {
+                        }
+                      }
+                      ["protected":"Pimple\Container":private]=>
+                      object(SplObjectStorage)#51 (1) {
+                        ["storage":"SplObjectStorage":private]=>
+                        array(0) {
+                        }
+                      }
+                      ["frozen":"Pimple\Container":private]=>
+                      array(3) {
+                        ["access_token"]=>
+                        bool(true)
+                        ["customer"]=>
+                        bool(true)
+                        ["logger"]=>
+                        bool(true)
+                      }
+                      ["raw":"Pimple\Container":private]=>
+                      array(3) {
+                        ["access_token"]=>
+                        object(Closure)#43 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Auth\Auth\AuthServiceProvider)#42 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["customer"]=>
+                        object(Closure)#49 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider)#48 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                        ["logger"]=>
+                        object(Closure)#37 (2) {
+                          ["this"]=>
+                          object(OtkurBiz\jdy\Kernel\Providers\LogServiceProvider)#36 (0) {
+                          }
+                          ["parameter"]=>
+                          array(1) {
+                            ["$app"]=>
+                            string(10) "<required>"
+                          }
+                        }
+                      }
+                      ["keys":"Pimple\Container":private]=>
+                      array(10) {
+                        ["log"]=>
+                        bool(true)
+                        ["logger"]=>
+                        bool(true)
+                        ["request"]=>
+                        bool(true)
+                        ["http_client"]=>
+                        bool(true)
+                        ["access_token"]=>
+                        bool(true)
+                        ["auth_code"]=>
+                        bool(true)
+                        ["org_access_token"]=>
+                        bool(true)
+                        ["system"]=>
+                        bool(true)
+                        ["customer"]=>
+                        bool(true)
+                        ["config"]=>
+                        bool(true)
+                      }
+                    }
+                    ["channels":protected]=>
+                    array(0) {
+                    }
+                    ["customCreators":protected]=>
+                    array(0) {
+                    }
+                    ["levels":protected]=>
+                    array(8) {
+                      ["debug"]=>
+                      int(100)
+                      ["info"]=>
+                      int(200)
+                      ["notice"]=>
+                      int(250)
+                      ["warning"]=>
+                      int(300)
+                      ["error"]=>
+                      int(400)
+                      ["critical"]=>
+                      int(500)
+                      ["alert"]=>
+                      int(550)
+                      ["emergency"]=>
+                      int(600)
+                    }
+                  }
+                  ["formatter"]=>
+                  object(GuzzleHttp\MessageFormatter)#58 (1) {
+                    ["template":"GuzzleHttp\MessageFormatter":private]=>
+                    string(55) ">>>>>>>>
+{request}
+<<<<<<<<
+{response}
+--------
+{error}"
+                  }
+                  ["logLevel"]=>
+                  string(4) "info"
+                }
+                ["parameter"]=>
+                array(1) {
+                  ["$handler"]=>
+                  string(10) "<required>"
+                }
+              }
+              ["dbld"]=>
+              *RECURSION*
+            }
+            ["handlerStack":protected]=>
+            *RECURSION*
+          }
+          ["parameter"]=>
+          array(1) {
+            ["$handler"]=>
+            string(10) "<required>"
+          }
+        }
+        [1]=>
+        string(4) "dbld"
+      }
+    }
+    ["cached":"GuzzleHttp\HandlerStack":private]=>
+    NULL
+  }
+}

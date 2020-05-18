@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\jdy\MiniProgram\Auth;
+namespace OtkurBiz\jdy\Auth\Auth;
 
 use OtkurBiz\jdy\Kernel\AccessToken as BaseAccessToken;
 
@@ -22,22 +22,20 @@ class AccessToken extends BaseAccessToken
     /**
      * @var string
      */
-    protected $endpointToGetToken = 'https://developer.toutiao.com/api/apps/token';
-
+    protected $endpointToGetToken = 'https://api.kingdee.com/auth/user/access_token';
+    protected $requestMethod = 'GET';
     /**
      * @return array
      */
     protected function getCredentials(): array
     {
-        $client_secret = $this->app['config']['app_secret'];
         date_default_timezone_set('Asia/Shanghai');
-        $client_id = $this->app['config']['app_id'];
-        $grand_type = 'client_credential';
-
         return [
-            'grant_type' => $grand_type,
-            'appid'      => $client_id,
-            'secret'     => $client_secret,
+            'username' => $this->app['config']['username'],
+            'password' => $this->app['config']['password'],
+            'client_id'      => $this->app['config']['client_id'],
+            'client_secret'     => $this->app['config']['client_secret'],
         ];
+
     }
 }

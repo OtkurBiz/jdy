@@ -11,6 +11,6 @@ class AccessTokenTest extends TestCase
         $app = Factory::make($config);
         $token = $app->access_token->getToken();
 
-        $this->assertArrayHasKey('access_token', $token);
+        $this->assertArrayHasKey('access_token', $token['data']);
     }
 }
