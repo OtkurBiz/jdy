@@ -34,12 +34,10 @@ class JdyScmClient extends BaseClient {
 
     public function request(string $url, string $method = 'GET', array $options = [], $returnRaw = false)
     {
-        if (empty($this->middlewares)) {
-            $this->registerHttpMiddlewares();
-            $this->pushMiddleware($this->dbldMiddleware(), 'dbld');
-        }
-        $response = $this->performRequest($url, $method, $options);
-        return $returnRaw ? $response : $this->castResponseToType($response, $this->app->config->get('response_type'));
+        $this->registerHttpMiddlewares();
+        $this->pushMiddleware($this->dbldMiddleware(), 'dbld');
+        return parent::request($url, $method, $options, $returnRaw);
+
     }
 
 }

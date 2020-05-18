@@ -21,7 +21,7 @@ use OtkurBiz\jdy\Kernel\BaseClient;
  *
  * @author alim
  */
-class Customer extends JdyScmClient
+class Customer extends BaseClient
 {
     /*
      * 查询客户列表
@@ -29,7 +29,7 @@ class Customer extends JdyScmClient
      */
     public function customerList()
     {
-        return $this->httpPost('jdyscm/customer/list');
+        return $this->httpPost('jdyscm/customer/list', ['dbld'=>$this->app['config']['dbld']]);
     }
 
 }
