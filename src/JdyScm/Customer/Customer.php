@@ -29,6 +29,7 @@ class Customer extends JdyScmClient
      */
     public function customerList($filter = [])
     {
+        $filter = json_encode($filter, JSON_FORCE_OBJECT);
         return $this->httpPostJson('jdyscm/customer/list', ['filter'=>$filter]);
     }
 
@@ -39,5 +40,15 @@ class Customer extends JdyScmClient
     public function addCustomers($items){
         return $this->httpPost('jdyscm/customer/add', ['items'=>$items]);
     }
+
+    public function updateCustomer($data){
+        return $this->httpPostJson('jdyscm/customer/update', ['items'=>[$data]]);
+    }
+
+    public function updateCustomers($items){
+        return $this->httpPost('jdyscm/customer/update', ['items'=>$items]);
+    }
+
+
 
 }
