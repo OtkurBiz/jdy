@@ -49,6 +49,4 @@ class SaleReturn extends JdyScmClient
         return $this->httpPost('jdyscm/saleReturn/update', ['items'=>$items]);
     }
 
-
-
 }

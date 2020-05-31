@@ -14,8 +14,8 @@ class OrgAccessTokenTest extends TestCase
 
 
         $jdyscm = Factory::make($config, 'jdyScm');
-//        $serviceList = $jdyscm->system->serviceList();
-//        var_dump($serviceList);die;
+        $serviceList = $jdyscm->system->serviceList();
+        var_dump($serviceList);die;
 //        $serviceList = $jdyscm->system->profile(792129189262);
 
 //        $customerList = $jdyscm->customer->customerList();
@@ -68,32 +68,36 @@ class OrgAccessTokenTest extends TestCase
 
 
 //
-        $product = $jdyscm->product->list(['productNumber'=>31140]);
-        $saleData = [
-            'number'    => 954521512312312,
-            'date'      => '2020-05-21 11:00:12',
-            'customerNumber'    => 7,
-            'receivedAmt' => 15,
-            'accounts'  => [[
-                'payment'=> 15,
-                'number' => 1003,
+//        $product = $jdyscm->product->list(['productNumber'=>31140]);
+//        $saleData = [
+//            'number'    => 954521512312312,
+//            'date'      => '2020-05-21 11:00:12',
+//            'customerNumber'    => 7,
+//            'receivedAmt' => 15,
+//            'accounts'  => [[
+//                'payment'=> 15,
+//                'number' => 1003,
+//
+//            ]],
+//            'entries'   => [
+//                [
+//                    'productNumber' => 31140,
+//                    'location'  => 'CK001',
+//                    'qty'       => 1,
+//                    'price'     => 10,
+//                    'unit'      =>$product['items'][0]['unit']
+//                ]
+//            ]
+//        ];
+//
+////        $sale = $jdyscm->sale->addSale($saleData);
+////        var_dump($sale, 1);die;
+//
+//        $bill = $jdyscm->check->check('954521512312312', 'sale', 2);
+//        var_dump($bill);die;
 
-            ]],
-            'entries'   => [
-                [
-                    'productNumber' => 31140,
-                    'location'  => 'CK001',
-                    'qty'       => 1,
-                    'price'     => 10,
-                    'unit'      =>$product['items'][0]['unit']
-                ]
-            ]
-        ];
-
-//        $sale = $jdyscm->sale->addSale($saleData);
-//        var_dump($sale, 1);die;
-
-        $bill = $jdyscm->check->check('954521512312312', 'sale', 2);
-        var_dump($bill);die;
+        $jdyAccounting = Factory::make($config, 'jdyAccounting');
+        $serviceList = $jdyAccounting->system->serviceList();
+        dd($serviceList);
     }
 }

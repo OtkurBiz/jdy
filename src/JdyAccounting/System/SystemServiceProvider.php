@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace OtkurBiz\jdy\JdyScm\Sale;
+namespace OtkurBiz\jdy\JdyAccounting\System;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -18,15 +18,15 @@ use Pimple\ServiceProviderInterface;
  *
  * @author alim <alim@bulutbazar.com>
  */
-class SaleServiceProvider implements ServiceProviderInterface
+class SystemServiceProvider implements ServiceProviderInterface
 {
     /**
      * {@inheritdoc}.
      */
     public function register(Container $app)
     {
-        !isset($app['sale']) && $app['sale'] = function ($app) {
-            return new Sale($app);
+        !isset($app['system']) && $app['system'] = function ($app) {
+            return new System($app);
         };
     }
 }

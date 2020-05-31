@@ -16,6 +16,7 @@ use OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider;
 use OtkurBiz\jdy\JdyScm\Product\ProductServiceProvider;
 use OtkurBiz\jdy\JdyScm\Sale\SaleServiceProvider;
 use OtkurBiz\jdy\JdyScm\SaleOrder\SaleOrderServiceProvider;
+use OtkurBiz\jdy\JdyScm\SaleReturn\SaleReturnServiceProvider;
 use OtkurBiz\jdy\Kernel\ServiceContainer;
 
 /**
@@ -36,5 +37,6 @@ class Application extends ServiceContainer
         ProductServiceProvider::class,
         BillServiceProvider::class,
         SaleServiceProvider::class,
+        SaleReturnServiceProvider::class,
     ];
 }
