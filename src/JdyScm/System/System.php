@@ -27,7 +27,7 @@ class System extends BaseClient
     public function serviceList(int $id = 0)
     {
         $params = ['id'=>$id];
-        return $this->httpGet('jdyscm/service/list', $params);
+        return $this->httpPostJson('jdyscm/service/list', $params);
     }
 
     /*

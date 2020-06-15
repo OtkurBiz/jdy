@@ -49,6 +49,7 @@ class BaseClient
     {
         $this->app = $app;
         $this->accessToken = $accessToken ?? $this->app['access_token'];
+        var_dump($this->accessToken);
     }
 
     /**

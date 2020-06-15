@@ -2,9 +2,33 @@
 namespace OtkurBiz\jdy\JdyAccounting;
 
 use OtkurBiz\jdy\Kernel\BaseClient;
+use OtkurBiz\jdy\Kernel\Contracts\AccessTokenInterface;
+use OtkurBiz\jdy\Kernel\ServiceContainer;
+use OtkurBiz\jdy\Kernel\Traits\InteractsWithCache;
 use Psr\Http\Message\RequestInterface;
 
 class JdyAccountingClient extends BaseClient {
+    use InteractsWithCache;
+
+    public $dbId;
+    public $sId;
+    public $dbIdCacheKey = 'otkurbiz.jdy.jdyAccounting.dbId';
+    public $sIdCacheKey = 'otkurbiz.jdy.jdyAccounting.sId';
+    public function __construct( ServiceContainer $app, AccessTokenInterface $accessToken = null ) {
+        parent::__construct( $app, $accessToken );
+        $this->dbId = $this->getCache()->fetch($this->dbIdCacheKey);
+        $this->sId  = $this->getCache()->fetch($this->sIdCacheKey);
+    }
+
+    public function setSId($sId){
+        $this->sId = $sId;
+        $this->getCache()->save($this->sIdCacheKey, $sId);
+    }
+
+    public function setDbId($dbId){
+        $this->dbId = $dbId;
+        $this->getCache()->save($this->dbIdCacheKey, $dbId);
+    }
 
     protected function dbIdMiddleware()
     {
@@ -41,7 +65,7 @@ class JdyAccountingClient extends BaseClient {
 
     private function getQuery(string $type = 'dbId'): array
     {
-        return ['dbId' => $this->app['config'][$type]];
+        return [$type => $this->{$type}];
     }
 
     public function request(string $url, string $method = 'GET', array $options = [], $returnRaw = false)

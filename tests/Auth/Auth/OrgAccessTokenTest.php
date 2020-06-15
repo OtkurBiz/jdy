@@ -13,9 +13,9 @@ class OrgAccessTokenTest extends TestCase
         $accessToken = $token['data']['access_token'];
 
 
-        $jdyscm = Factory::make($config, 'jdyScm');
-        $serviceList = $jdyscm->system->serviceList();
-        var_dump($serviceList);die;
+//        $jdyscm = Factory::make($config, 'jdyScm');
+//        $serviceList = $jdyscm->system->serviceList();
+//        var_dump($serviceList);die;
 //        $serviceList = $jdyscm->system->profile(792129189262);
 
 //        $customerList = $jdyscm->customer->customerList();
@@ -97,7 +97,25 @@ class OrgAccessTokenTest extends TestCase
 //        var_dump($bill);die;
 
         $jdyAccounting = Factory::make($config, 'jdyAccounting');
-        $serviceList = $jdyAccounting->system->serviceList();
-        dd($serviceList);
+//        $serviceList = $jdyAccounting->system->serviceList();
+
+
+        $jdyAccounting->system->setSid(792289491028);
+        $jdyAccounting->system->setDbId(791079231922211);
+
+
+//        $profile = $jdyAccounting->system->profile('std_currency');
+//        var_dump($profile);die;
+
+//        $accountingSubjectList = $jdyAccounting->account->list();
+//        var_dump($accountingSubjectList);die;
+
+        $filter = [
+            'fromPeriod'=> '202001',
+            'toPeriod'  => '202002'
+        ];
+        $voucherList = $jdyAccounting->voucher->list($filter);
+
+        var_dump($voucherList);die;
     }
 }

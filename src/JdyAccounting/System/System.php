@@ -26,8 +26,12 @@ class System extends JdyAccountingClient
      */
     public function serviceList(int $id = 0)
     {
-        $params = ['id'=>$id];
-        return $this->httpGet('jdyaccounting/service', $params);
+        $params = [];
+        if($id){
+            $params = ['id'=>$id];
+        }
+
+        return $this->httpGet('jdyaccouting/service', $params);
     }
 
     /*
@@ -43,21 +47,21 @@ std_currency	- 本位币编码
      */
     public function profile(string  $key){
 
-        return $this->httpGet('jdyaccounting/profile', ['key'=>$key]);
+        return $this->httpGet('jdyaccouting/profile', ['key'=>$key]);
     }
 
     public function balanceCheck(){
 
-        return $this->httpGet('jdyaccounting/balance/check', []);
+        return $this->httpGet('jdyaccouting/balance/check', []);
     }
 
     public function balanceQuery(int $classId, string $currency = 'RMB'){
 
-        return $this->httpGet('jdyaccounting/balance/query', ['classId'=>$classId, 'currency'=>$currency]);
+        return $this->httpGet('jdyaccouting/balance/query', ['classId'=>$classId, 'currency'=>$currency]);
     }
 
     public function getLog(string $username){
-        return $this->httpGet('jdyaccounting/log/logCount4KJSchool', ['username'=>$username]);
+        return $this->httpGet('jdyaccouting/log/logCount4KJSchool', ['username'=>$username]);
 
     }
 }

@@ -10,6 +10,9 @@
 
 namespace OtkurBiz\jdy\JdyAccounting;
 
+use OtkurBiz\jdy\Auth\Auth\AuthServiceProvider;
+use OtkurBiz\jdy\JdyAccounting\AccountingSubject\AccountingSubjectServiceProvider;
+use OtkurBiz\jdy\JdyAccounting\Voucher\VoucherServiceProvider;
 use OtkurBiz\jdy\JdyAccounting\System\SystemServiceProvider;
 use OtkurBiz\jdy\Kernel\ServiceContainer;
 
@@ -25,5 +28,8 @@ class Application extends ServiceContainer
      */
     protected $providers = [
         SystemServiceProvider::class,
+        AuthServiceProvider::class,
+        AccountingSubjectServiceProvider::class,
+        VoucherServiceProvider::class,
     ];
 }

@@ -143,7 +143,6 @@ trait HasHttpRequests
         if (property_exists($this, 'baseUri') && !is_null($this->baseUri)) {
             $options['base_uri'] = $this->baseUri;
         }
-
         $response = $this->getHttpClient()->request($method, $url, $options);
         $response->getBody()->rewind();
 
