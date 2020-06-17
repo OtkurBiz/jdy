@@ -110,12 +110,32 @@ class OrgAccessTokenTest extends TestCase
 //        $accountingSubjectList = $jdyAccounting->account->list();
 //        var_dump($accountingSubjectList);die;
 
-        $filter = [
-            'fromPeriod'=> '202001',
-            'toPeriod'  => '202002'
-        ];
-        $voucherList = $jdyAccounting->voucher->list($filter);
+//        $filter = [
+//            'fromPeriod'=> '202001',
+//            'toPeriod'  => '202002'
+//        ];
+//        $voucherList = $jdyAccounting->voucher->list($filter);
+//        var_dump($voucherList);die;
 
-        var_dump($voucherList);die;
+        $vouchers = [
+            [
+                'groupName'=>'记',
+                'date'=>'2020-04-01',
+                'yearPeriod'=> '202004',
+                'entries' => [
+                    'accNo'=> 1001,
+                    'dc'=> 1,
+                    'exp'=> "acb",
+                    'currency'=> 'RMB',
+                    'rate'=> 0,
+                    'amount'=>100,
+
+                ]
+            ]
+        ];
+
+        $vouchers = $jdyAccounting->voucher->add($vouchers);
+        var_dump($vouchers);die;
+
     }
 }

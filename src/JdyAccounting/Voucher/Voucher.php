@@ -48,4 +48,9 @@ class Voucher extends JdyAccountingClient
         return $this->httpPostJson('jdyaccouting/voucherlist', ['filter'=>$filter]);
     }
 
+    public function add(array $vouchers, bool $mode = false){
+        return $this->httpPostJson('jdyaccouting/voucher', $vouchers, ['mode'=>$mode]);
+    }
+
+
 }
