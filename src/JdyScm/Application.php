@@ -13,6 +13,7 @@ namespace OtkurBiz\jdy\JdyScm;
 use OtkurBiz\jdy\Auth\Auth\AuthServiceProvider;
 use OtkurBiz\jdy\JdyScm\Bill\BillServiceProvider;
 use OtkurBiz\jdy\JdyScm\Customer\CustomerServiceProvider;
+use OtkurBiz\jdy\JdyScm\Inventory\InventoryServiceProvider;
 use OtkurBiz\jdy\JdyScm\Product\ProductServiceProvider;
 use OtkurBiz\jdy\JdyScm\Sale\SaleServiceProvider;
 use OtkurBiz\jdy\JdyScm\SaleOrder\SaleOrderServiceProvider;
@@ -38,5 +39,6 @@ class Application extends ServiceContainer
         BillServiceProvider::class,
         SaleServiceProvider::class,
         SaleReturnServiceProvider::class,
+        InventoryServiceProvider::class,
     ];
 }
