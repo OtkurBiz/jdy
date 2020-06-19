@@ -29,7 +29,7 @@ class Inventory extends JdyScmClient
      */
     public function list($number, $showZero = 0)
     {
-        return $this->httpPostJson('jdyscm/inventory/list', ['number'=>$number, 'showZero'=>$showZero]);
+        return $this->httpGet('jdyscm/inventory/list', ['number'=>$number, 'showZero'=>$showZero]);
     }
 
 }

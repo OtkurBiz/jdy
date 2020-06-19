@@ -13,7 +13,10 @@ class OrgAccessTokenTest extends TestCase
         $accessToken = $token['data']['access_token'];
 
 
-//        $jdyscm = Factory::make($config, 'jdyScm');
+        $jdyscm = Factory::make($config, 'jdyScm');
+
+        $d = $jdyscm->inventory->list(31231);
+        var_dump($d);die;
 //        $serviceList = $jdyscm->system->serviceList();
 //        var_dump($serviceList);die;
 //        $serviceList = $jdyscm->system->profile(792129189262);
